@@ -1,0 +1,678 @@
+O:9:"MagpieRSS":22:{s:6:"parser";N;s:12:"current_item";a:0:{}s:5:"items";a:15:{i:0;a:9:{s:5:"title";s:23:"So Long, Farewell PHP 4";s:4:"link";s:62:"http://expressionengine.com/blog/entry/so_long_farewell_php_4/";s:2:"dc";a:1:{s:7:"creator";s:9:"Greg Aker";}s:8:"category";s:18:"Developer BlogNews";s:8:"comments";s:62:"http://expressionengine.com/blog/entry/so_long_farewell_php_4/";s:11:"description";s:2794:"<p>Our next ExpressionEngine release will mark the end of PHP 4 support in ExpressionEngine and CodeIgniter. For most of you, this should be a non-issue. PHP 4 was originally released in May of 2000 and reached End of Life in December of 2007.&nbsp; If you think about it, PHP 4 is to us what Internet Explorer 6 is to you.</p>
+
+<p>We will be requiring PHP 5.1.6. The easiest way to see if your current host meets the requirements is to download and test using the <a href="http://expressionengine.com/files/ee_server_wizard.zip">Server Wizard</a>. If your host does not meet the minimum requirements, open a support ticket and work with them to upgrade your account to PHP 5. In the majority of cases, this should be trivial.</p>
+
+<p>If you are a third-party developer there are a few things you need to be aware of:</p>
+
+<p>1. All constructors have been renamed to __construct. If your code extends one of our classes and includes a call to the parent constructor, you will need to change that call.</p>
+
+<p>2. PHP 5.1.6 does <b>not</b> include support for native JSON functions. To remain compatible with all ExpressionEngine add-ons please make sure you continue to use:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">EE</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">javascript</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">generate_json</span><span style="color: #007700">();<br /><br /></span><span style="color: #FF8000">//&nbsp;and&nbsp;in&nbsp;reverse<br /></span><span style="color: #007700">if&nbsp;(&nbsp;!&nbsp;</span><span style="color: #0000BB">function_exists</span><span style="color: #007700">(</span><span style="color: #DD0000">'json_decode'</span><span style="color: #007700">))<br /></span><span style="color: #0000BB">&#123;<br />&nbsp;&nbsp;&nbsp;&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">EE</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">load</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">library</span><span style="color: #007700">(</span><span style="color: #DD0000">'Services_Json'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">&#125;<br /><br />json_decode</span><span style="color: #007700">(</span><span style="color: #0000BB">$json</span><span style="color: #007700">);&nbsp;</span>
+</span>
+</code></div>
+
+<p>Keep an eye on the <a href="http://expressionengine.com/user_guide/development">developers docs</a> as we have some cool stuff in store.</p>
+
+<p>Let&#8217;s all do a happy dance and say goodbye to our little friend.&nbsp; 
+</p>";s:4:"guid";s:77:"http://expressionengine.com/blog/entry/so_long_farewell_php_4/#When:20:40:25Z";s:7:"pubdate";s:29:"Thu, 11 Nov 2010 20:40:25 GMT";s:7:"summary";s:2794:"<p>Our next ExpressionEngine release will mark the end of PHP 4 support in ExpressionEngine and CodeIgniter. For most of you, this should be a non-issue. PHP 4 was originally released in May of 2000 and reached End of Life in December of 2007.&nbsp; If you think about it, PHP 4 is to us what Internet Explorer 6 is to you.</p>
+
+<p>We will be requiring PHP 5.1.6. The easiest way to see if your current host meets the requirements is to download and test using the <a href="http://expressionengine.com/files/ee_server_wizard.zip">Server Wizard</a>. If your host does not meet the minimum requirements, open a support ticket and work with them to upgrade your account to PHP 5. In the majority of cases, this should be trivial.</p>
+
+<p>If you are a third-party developer there are a few things you need to be aware of:</p>
+
+<p>1. All constructors have been renamed to __construct. If your code extends one of our classes and includes a call to the parent constructor, you will need to change that call.</p>
+
+<p>2. PHP 5.1.6 does <b>not</b> include support for native JSON functions. To remain compatible with all ExpressionEngine add-ons please make sure you continue to use:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">EE</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">javascript</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">generate_json</span><span style="color: #007700">();<br /><br /></span><span style="color: #FF8000">//&nbsp;and&nbsp;in&nbsp;reverse<br /></span><span style="color: #007700">if&nbsp;(&nbsp;!&nbsp;</span><span style="color: #0000BB">function_exists</span><span style="color: #007700">(</span><span style="color: #DD0000">'json_decode'</span><span style="color: #007700">))<br /></span><span style="color: #0000BB">&#123;<br />&nbsp;&nbsp;&nbsp;&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">EE</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">load</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">library</span><span style="color: #007700">(</span><span style="color: #DD0000">'Services_Json'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">&#125;<br /><br />json_decode</span><span style="color: #007700">(</span><span style="color: #0000BB">$json</span><span style="color: #007700">);&nbsp;</span>
+</span>
+</code></div>
+
+<p>Keep an eye on the <a href="http://expressionengine.com/user_guide/development">developers docs</a> as we have some cool stuff in store.</p>
+
+<p>Let&#8217;s all do a happy dance and say goodbye to our little friend.&nbsp; 
+</p>";}i:1;a:9:{s:5:"title";s:25:"Call For Papers EECI 2011";s:4:"link";s:65:"http://expressionengine.com/blog/entry/call_for_papers_eeci_2011/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:65:"http://expressionengine.com/blog/entry/call_for_papers_eeci_2011/";s:11:"description";s:1572:"<p>We’re gearing up for EECI2011! This year we’re looking forward to a fantastic group of speakers, as always, but are doing something a touch different. We’re taking applications for speaking topics. You’ll have the chance to give us input in what topics you’d like to hear as well as offer to speak, or suggest a speaker, and help shape the ExpressionEngine/CodeIgniter event of the year!</p>
+
+<p>If I sound a bit excited, I am. If you missed EECI in San Francisco or Leiden, you won’t want to miss what’s coming up for New York.</p>
+
+<p><b>Please apply to any of the following topics, or submit an idea of your own.</b>
+</p><ul>
+<li>Installing EE Best Practices</li>
+<li>Moving from another CMS to ExpressionEngine</li>
+<li>Upgrading to ExpressionEngine 2</li>
+<li>PHP in Templates</li>
+<li>Using CodeIgniter to extend ExpressionEngine: A beginning handbook</li>
+<li>Utilizing E-commerce with ExpressionEngine</li>
+<li>How ExpressionEngine utilizes CodeIgniter and what that means for development</li>
+<li>User best practices: how to best prepare your users for administrating ExpressionEngine</li>
+<li>Channels, Categories, and Custom Fields: Best Practices for utilizing ExpressionEngine&#8217;s ultimate flexibility</li>
+<li>Your Suggested Topic</li>
+</ul>
+
+<p><b>How to apply</b>
+</p><ul>
+<li>Two to three paragraph submission describing a topic</li>
+<li>Your expected outcome with goals for the audience.</li>
+<li>The level of audience you&#8217;re reaching</li>
+</ul>
+
+<p>Submission deadline is November 23th, 2010. Please email submissions to 
+</p>";s:4:"guid";s:80:"http://expressionengine.com/blog/entry/call_for_papers_eeci_2011/#When:22:45:20Z";s:7:"pubdate";s:29:"Mon, 08 Nov 2010 22:45:20 GMT";s:7:"summary";s:1572:"<p>We’re gearing up for EECI2011! This year we’re looking forward to a fantastic group of speakers, as always, but are doing something a touch different. We’re taking applications for speaking topics. You’ll have the chance to give us input in what topics you’d like to hear as well as offer to speak, or suggest a speaker, and help shape the ExpressionEngine/CodeIgniter event of the year!</p>
+
+<p>If I sound a bit excited, I am. If you missed EECI in San Francisco or Leiden, you won’t want to miss what’s coming up for New York.</p>
+
+<p><b>Please apply to any of the following topics, or submit an idea of your own.</b>
+</p><ul>
+<li>Installing EE Best Practices</li>
+<li>Moving from another CMS to ExpressionEngine</li>
+<li>Upgrading to ExpressionEngine 2</li>
+<li>PHP in Templates</li>
+<li>Using CodeIgniter to extend ExpressionEngine: A beginning handbook</li>
+<li>Utilizing E-commerce with ExpressionEngine</li>
+<li>How ExpressionEngine utilizes CodeIgniter and what that means for development</li>
+<li>User best practices: how to best prepare your users for administrating ExpressionEngine</li>
+<li>Channels, Categories, and Custom Fields: Best Practices for utilizing ExpressionEngine&#8217;s ultimate flexibility</li>
+<li>Your Suggested Topic</li>
+</ul>
+
+<p><b>How to apply</b>
+</p><ul>
+<li>Two to three paragraph submission describing a topic</li>
+<li>Your expected outcome with goals for the audience.</li>
+<li>The level of audience you&#8217;re reaching</li>
+</ul>
+
+<p>Submission deadline is November 23th, 2010. Please email submissions to 
+</p>";}i:2;a:9:{s:5:"title";s:24:"Introducing the Forecast";s:4:"link";s:64:"http://expressionengine.com/blog/entry/introducing_the_forecast/";s:2:"dc";a:1:{s:7:"creator";s:11:"Derek Jones";}s:8:"category";s:4:"News";s:8:"comments";s:64:"http://expressionengine.com/blog/entry/introducing_the_forecast/";s:11:"description";s:1468:"<p>We&#8217;ve got a new page for your bookmarks, the <a href="http://expressionengine.com/blog/forecast/">ExpressionEngine Forecast</a> (version 0.1).&nbsp; This page will keep you apprised of what EllisLab is working on right now for ExpressionEngine.</p>
+
+<p>The goal is to keep you informed of what&#8217;s coming soon, so that you have an idea of some of the things that will be in a future release, or that we have an ongoing project for.</p>
+
+<p>Each item includes a brief description of what&#8217;s being worked on, where it sits in queue, who is involved, and the title will link to a topical discussion in the forums when available.&nbsp; The items include features and plans that we are preparing to deliver in the very near term, perhaps one or two updates out.&nbsp; Note that this list does not include bugs that are being worked on, as their status and progress is published separately in the <a href="http://expressionengine.com/bug_tracker/">Bug Tracker</a>.</p>
+
+<p>Why version 0.1?&nbsp; The ExpressionEngine Forecast is a continually evolving communication tool that we will be progressively adding features to.&nbsp; We have ideas for interactivity, improved display, tracking progress over time, ways to communicate some of our longer term goals without giving up competitive ground, etc.&nbsp; This is the most basic start, but we feel that even in this form it has value for the community, so we&#8217;re happy to start publishing it now.
+</p>";s:4:"guid";s:79:"http://expressionengine.com/blog/entry/introducing_the_forecast/#When:16:31:50Z";s:7:"pubdate";s:29:"Tue, 02 Nov 2010 16:31:50 GMT";s:7:"summary";s:1468:"<p>We&#8217;ve got a new page for your bookmarks, the <a href="http://expressionengine.com/blog/forecast/">ExpressionEngine Forecast</a> (version 0.1).&nbsp; This page will keep you apprised of what EllisLab is working on right now for ExpressionEngine.</p>
+
+<p>The goal is to keep you informed of what&#8217;s coming soon, so that you have an idea of some of the things that will be in a future release, or that we have an ongoing project for.</p>
+
+<p>Each item includes a brief description of what&#8217;s being worked on, where it sits in queue, who is involved, and the title will link to a topical discussion in the forums when available.&nbsp; The items include features and plans that we are preparing to deliver in the very near term, perhaps one or two updates out.&nbsp; Note that this list does not include bugs that are being worked on, as their status and progress is published separately in the <a href="http://expressionengine.com/bug_tracker/">Bug Tracker</a>.</p>
+
+<p>Why version 0.1?&nbsp; The ExpressionEngine Forecast is a continually evolving communication tool that we will be progressively adding features to.&nbsp; We have ideas for interactivity, improved display, tracking progress over time, ways to communicate some of our longer term goals without giving up competitive ground, etc.&nbsp; This is the most basic start, but we feel that even in this form it has value for the community, so we&#8217;re happy to start publishing it now.
+</p>";}i:3;a:9:{s:5:"title";s:60:"Full Time Support Position open: Customer Support Specialist";s:4:"link";s:71:"http://expressionengine.com/blog/entry/full_time_support_position_open/";s:2:"dc";a:1:{s:7:"creator";s:9:"Lisa Wess";}s:8:"category";s:4:"News";s:8:"comments";s:71:"http://expressionengine.com/blog/entry/full_time_support_position_open/";s:11:"description";s:2905:"<p>Do you love ExpressionEngine? Do you enjoy helping people succeed using MojoMotor? If so, come join the outstanding EllisLab team as our new Customer Support Specialist!</p>
+
+<p>Reports to: Director of Community Services<br />
+Hours: Full-time salaried position (must be able to work US business hours, potential weekend hours)<br />
+Salary: Negotiable based on experience<br />
+Location: Work from home</p>
+
+<p>The Customer Support Specialist is the first point of contact for all technical support requests and focuses on ensuring an excellent technical support experience for ExpressionEngine and MojoMotor customers. The Customer Support Specialist’s primary responsibility is to champion our customers: beginning with their technical support journey, escalating as necessary, following the issue to resolution, and ensuring a positive support experience.</p>
+
+<p>The Customer Support Specialist enjoys solving challenging puzzles and explaining the solutions to others.</p>
+
+<p>The Customer Support Specialist will work with all EllisLab staff to innovate in these areas and focus on growth of knowledge resources and improving the support workflow.</p>
+
+<p><strong>Duties:</strong></p>
+
+<ul>
+<li>Championing customers and ensuring that support requests are handled with expertise, kindness, and skill</li>
+<li>Handling customer logins securely and confidentially for high level troubleshooting on customer sites</li>
+<li>Escalating issues to the development team as needed</li>
+</ul>
+
+<p><strong>Qualifications:</strong></p>
+
+<ul>
+<li>Proficient with ExpressionEngine and MojoMotor.</li>
+<li>Experience in customer service and support</li>
+<li>Excellent troubleshooting skills</li>
+<li>Knowledge of XHTML, HTML, and other web technologies used in web design</li>
+<li>Knowledge of technologies that affect dynamic publishing systems</li>
+<li>Ability to set up a local development environment (Apache, MySQL, PHP), and modify its configuration as necessary to mimic relevant hosting environments</li>
+<li>Excellent communication and organizational skills, i.e. conversing timely over email and/or IM is essential</li>
+<li>Ability to work well independently and productively on a small team without being micromanaged</li>
+<li>Written skills to communicate technical information clearly and in “layman’s terms” while being both professional, kind, friendly, and encouraging</li>
+<li>Ability to recognize patterns of support issues in order to identify where resources are needed and potential bugs need handling</li>
+</ul>
+
+<p>Previous technical support experience is required.</p>
+
+<p><strong>Exceptional Qualifications:</strong></p>
+
+<ul>
+<li>Experience with CodeIgniter, PHP, MySQL, and Javascript</li>
+<li>Experience teaching technical skills</li>
+<li>Excellent telephone skills</li>
+</ul>
+
+<p>Find more opportunities on our <a href="http://ellislab.com/company/jobs/">Jobs page</a>
+</p>";s:4:"guid";s:86:"http://expressionengine.com/blog/entry/full_time_support_position_open/#When:21:22:16Z";s:7:"pubdate";s:29:"Mon, 01 Nov 2010 21:22:16 GMT";s:7:"summary";s:2905:"<p>Do you love ExpressionEngine? Do you enjoy helping people succeed using MojoMotor? If so, come join the outstanding EllisLab team as our new Customer Support Specialist!</p>
+
+<p>Reports to: Director of Community Services<br />
+Hours: Full-time salaried position (must be able to work US business hours, potential weekend hours)<br />
+Salary: Negotiable based on experience<br />
+Location: Work from home</p>
+
+<p>The Customer Support Specialist is the first point of contact for all technical support requests and focuses on ensuring an excellent technical support experience for ExpressionEngine and MojoMotor customers. The Customer Support Specialist’s primary responsibility is to champion our customers: beginning with their technical support journey, escalating as necessary, following the issue to resolution, and ensuring a positive support experience.</p>
+
+<p>The Customer Support Specialist enjoys solving challenging puzzles and explaining the solutions to others.</p>
+
+<p>The Customer Support Specialist will work with all EllisLab staff to innovate in these areas and focus on growth of knowledge resources and improving the support workflow.</p>
+
+<p><strong>Duties:</strong></p>
+
+<ul>
+<li>Championing customers and ensuring that support requests are handled with expertise, kindness, and skill</li>
+<li>Handling customer logins securely and confidentially for high level troubleshooting on customer sites</li>
+<li>Escalating issues to the development team as needed</li>
+</ul>
+
+<p><strong>Qualifications:</strong></p>
+
+<ul>
+<li>Proficient with ExpressionEngine and MojoMotor.</li>
+<li>Experience in customer service and support</li>
+<li>Excellent troubleshooting skills</li>
+<li>Knowledge of XHTML, HTML, and other web technologies used in web design</li>
+<li>Knowledge of technologies that affect dynamic publishing systems</li>
+<li>Ability to set up a local development environment (Apache, MySQL, PHP), and modify its configuration as necessary to mimic relevant hosting environments</li>
+<li>Excellent communication and organizational skills, i.e. conversing timely over email and/or IM is essential</li>
+<li>Ability to work well independently and productively on a small team without being micromanaged</li>
+<li>Written skills to communicate technical information clearly and in “layman’s terms” while being both professional, kind, friendly, and encouraging</li>
+<li>Ability to recognize patterns of support issues in order to identify where resources are needed and potential bugs need handling</li>
+</ul>
+
+<p>Previous technical support experience is required.</p>
+
+<p><strong>Exceptional Qualifications:</strong></p>
+
+<ul>
+<li>Experience with CodeIgniter, PHP, MySQL, and Javascript</li>
+<li>Experience teaching technical skills</li>
+<li>Excellent telephone skills</li>
+</ul>
+
+<p>Find more opportunities on our <a href="http://ellislab.com/company/jobs/">Jobs page</a>
+</p>";}i:4;a:9:{s:5:"title";s:35:"Will the Real SAEF Please Stand Up?";s:4:"link";s:74:"http://expressionengine.com/blog/entry/will_the_real_saef_please_stand_up/";s:2:"dc";a:1:{s:7:"creator";s:9:"Greg Aker";}s:8:"category";s:18:"Developer BlogNews";s:8:"comments";s:74:"http://expressionengine.com/blog/entry/will_the_real_saef_please_stand_up/";s:11:"description";s:1642:"<p>It’s no secret that the release of ExpressionEngine 2 revealed some limitations in our current Stand Alone Entry Form (SAEF). In large part, this is due to our new approach to custom fields and the resulting variety and potential complexity of new field types. Believe me, we are as frustrated with it as you are.</p>
+
+<p>The current approach just isn’t cutting it and putting band-aids on the code isn’t a ‘fix’ we find acceptable. We also have to acknowledge that Add-ons have been needed in the past to get the most out of even the 1.x version. So we’ve decided to step back, take a deep breath, and look at the SAEF with fresh eyes.</p>
+
+<p>Here&#8217;s where we need your help, and where you can help us shape the next incarnation of the SAEF.&nbsp; </p>
+
+<p>Our short list of goals:</p>
+
+<ul>
+	<li>Third-party field type support</li>
+	<li>Allow editing entries from the SAEF</li>
+	<li>Easier to customize the form into your site&#8217;s design.</li>
+</ul>
+
+<p>We have a few things to think about in particular:&nbsp; What obstacles do you find when trying to &#8216;skin&#8217; the SAEF? How do you typically use CSS to style a form? Do you prefer more required template tags or more predefined markup? How do you feel about adding your own javascript interactions?&nbsp; Have examples of complex issues where the SAEF (1.x or 2.x) lets you down?&nbsp; Lay them out.&nbsp; The more information we have the better.</p>
+
+<p>We can&#8217;t promise that each and every request here is going to make it into the final product, but rest assured that we will consider every suggestion.&nbsp; </p>
+
+<p>Until next time&#8230;
+</p>";s:4:"guid";s:89:"http://expressionengine.com/blog/entry/will_the_real_saef_please_stand_up/#When:21:01:40Z";s:7:"pubdate";s:29:"Thu, 21 Oct 2010 21:01:40 GMT";s:7:"summary";s:1642:"<p>It’s no secret that the release of ExpressionEngine 2 revealed some limitations in our current Stand Alone Entry Form (SAEF). In large part, this is due to our new approach to custom fields and the resulting variety and potential complexity of new field types. Believe me, we are as frustrated with it as you are.</p>
+
+<p>The current approach just isn’t cutting it and putting band-aids on the code isn’t a ‘fix’ we find acceptable. We also have to acknowledge that Add-ons have been needed in the past to get the most out of even the 1.x version. So we’ve decided to step back, take a deep breath, and look at the SAEF with fresh eyes.</p>
+
+<p>Here&#8217;s where we need your help, and where you can help us shape the next incarnation of the SAEF.&nbsp; </p>
+
+<p>Our short list of goals:</p>
+
+<ul>
+	<li>Third-party field type support</li>
+	<li>Allow editing entries from the SAEF</li>
+	<li>Easier to customize the form into your site&#8217;s design.</li>
+</ul>
+
+<p>We have a few things to think about in particular:&nbsp; What obstacles do you find when trying to &#8216;skin&#8217; the SAEF? How do you typically use CSS to style a form? Do you prefer more required template tags or more predefined markup? How do you feel about adding your own javascript interactions?&nbsp; Have examples of complex issues where the SAEF (1.x or 2.x) lets you down?&nbsp; Lay them out.&nbsp; The more information we have the better.</p>
+
+<p>We can&#8217;t promise that each and every request here is going to make it into the final product, but rest assured that we will consider every suggestion.&nbsp; </p>
+
+<p>Until next time&#8230;
+</p>";}i:5;a:9:{s:5:"title";s:49:"2.1.1 Release - What Will Be There, What Will Not";s:4:"link";s:86:"http://expressionengine.com/blog/entry/2.1.1_release_what_will_be_there_what_will_not/";s:2:"dc";a:1:{s:7:"creator";s:11:"Derek Jones";}s:8:"category";s:4:"News";s:8:"comments";s:86:"http://expressionengine.com/blog/entry/2.1.1_release_what_will_be_there_what_will_not/";s:11:"description";s:5471:"<p>Next week we will be releasing (finally) ExpressionEngine 2.1.1 to you.&nbsp; It has a great deal of enhancements and bug fixes, as well as improved security.&nbsp; The full details will be found <a href="http://expressionengine.com/user_guide/changelog.html">in the change log</a> when it is released, but here are some highlights.</p>
+
+<ul>
+	<li>Improved version update notification, to indicate normal vs. high priority releases</li>
+	<li>show_empty= parameter of the Channel Categories tag is now ::drum roll:: channel specific!</li>
+	<li>Added a {last_segment} global variable</li>
+	<li>The Comment Module has a number of improvements, including it&#8217;s own control panel with better comment moderation, new variables and parameters, built-in inline editing for commenters, and smart notifications.</li>
+	<li>Moblog module now works with POP3 over SSL (hello, GMail!)</li>
+	<li>Improvements and bug fixes to the Channel Entries API, primarily for third party developers</li>
+	<li>Over 50 bug fixes</li>
+</ul>
+
+<p>In order to prevent even further delays, though, there is some bad news: the date bug dealing with entries jumping an hour when you are editing an entry that is dated in the opposing DST will not make this release.&nbsp; This bears explanation, because it wasn&#8217;t ignored; on the contrary, it&#8217;s had significant attention from the team for the last three weeks, but the fixes simply weren&#8217;t good enough.&nbsp; There&#8217;s been a recent outcry for increased transparency from us, and we&#8217;re committed to providing it, so here it goes:</p>
+
+<p>The issue is that in the summer, when you post an entry dated for the winter, the system compensates for the one hour difference so that the 7pm you input in the summer still means 7pm when winter rolls around and that entry needs to be published.</p>
+
+<p>In 1.x, this calculation was forced, and it worked (mostly) because 1.x&#8217;s dates were not real UTC/GMT dates.&nbsp; They were relative to the server time, and the localization faked it so that it seemed like real GMT dates, but if you ever moved an installation to a server in another time zone, there was potential that all of your dates would be wrong.&nbsp; We fixed this in 2.x, one of the largest database changes in the updater, fixing every timestamp in your installation to be a real GMT date.</p>
+
+<p>What got overlooked is this hack from 1.x to handle summer/winter entry dates described above, which remained hidden during beta and 2.1&#8217;s launch, undoubtedly because everyone&#8217;s system clocks were set for the winter (users and testers included), where this problem doesn&#8217;t exist.&nbsp; As soon as DST was back on, then it became noticeable.</p>
+
+<p>So it would seem like the fix is simple.&nbsp; 2.x uses real GMT dates, so this arbitrary addition/subtraction of one hour to make 7pm = 7pm at any time of the year shouldn&#8217;t be necessary anymore.&nbsp; And that&#8217;s true.&nbsp; But now we are at the complicated part that is a unique problem to ExpressionEngine and to 2.x: the &#8220;DST Active on Entry&#8221; and &#8220;Honor the Daylight Saving Time setting associated with each channel entry&#8221; settings.</p>
+
+<p>These two settings existed in 1.x to add fine grain control over time display between DST seasons.&nbsp; However, they&#8217;ve always been confusing for developers and users, and we&#8217;re pretty sure that most people don&#8217;t understand what they&#8217;re for, when to use them, and what the effects are of the combinations of those settings.&nbsp; If 2.x were a stand-alone product and we didn&#8217;t have to worry about upgrades from 1.x, we&#8217;d just remove these two settings.&nbsp; But alas, that&#8217;s not an option.&nbsp; There are both 1.x sites and 2.1 sites where publishers have fiddled with these settings to get the <em>results</em> they are looking for on the front end, but the actual date stored in the database is not modified.</p>
+
+<p>So the &#8220;correct&#8221; fix has the very negative impact of having all entries that publishers have used those settings to be off by an hour after updating to 2.1.1.&nbsp; Weighed in the balance, we&#8217;d rather have publishers continue watching dates closely on edit and working around this bug than we would suddenly breaking the dates for all of the entries on an entire site.&nbsp; So the fix for this issue is out until we can come up with a satisfactory way of determining not just what the date stored in the database is, but the <em>intent</em> the publisher had from when they edited the entry, and what settings they employed to achieve that.&nbsp; By reversing the old logic from those settings, we hope to bring those dates back to reality so that the simple correct fix to the problem works flawlessly.</p>
+
+<p>It&#8217;s doable, but it means lots and lots of testing on real world sites.&nbsp; Hence, we are releasing what we have now while continuing to work on this fix, so that other fixes and enhancements aren&#8217;t held hostage by this one bug.</p>
+
+<p>If there&#8217;s a small glimmer of light with respect to 2.x&#8217;s date issues this summer, it&#8217;s that the AM/PM bug is fixed.&nbsp; Small victories.&nbsp; In all seriousness, though, this release has significant improvements and many great new things, and we hope it marks an improvement and a beginning of restoration of trust, and we thank you for your patience with us on the DST entry date issue.
+</p>";s:4:"guid";s:101:"http://expressionengine.com/blog/entry/2.1.1_release_what_will_be_there_what_will_not/#When:18:45:55Z";s:7:"pubdate";s:29:"Fri, 15 Oct 2010 18:45:55 GMT";s:7:"summary";s:5471:"<p>Next week we will be releasing (finally) ExpressionEngine 2.1.1 to you.&nbsp; It has a great deal of enhancements and bug fixes, as well as improved security.&nbsp; The full details will be found <a href="http://expressionengine.com/user_guide/changelog.html">in the change log</a> when it is released, but here are some highlights.</p>
+
+<ul>
+	<li>Improved version update notification, to indicate normal vs. high priority releases</li>
+	<li>show_empty= parameter of the Channel Categories tag is now ::drum roll:: channel specific!</li>
+	<li>Added a {last_segment} global variable</li>
+	<li>The Comment Module has a number of improvements, including it&#8217;s own control panel with better comment moderation, new variables and parameters, built-in inline editing for commenters, and smart notifications.</li>
+	<li>Moblog module now works with POP3 over SSL (hello, GMail!)</li>
+	<li>Improvements and bug fixes to the Channel Entries API, primarily for third party developers</li>
+	<li>Over 50 bug fixes</li>
+</ul>
+
+<p>In order to prevent even further delays, though, there is some bad news: the date bug dealing with entries jumping an hour when you are editing an entry that is dated in the opposing DST will not make this release.&nbsp; This bears explanation, because it wasn&#8217;t ignored; on the contrary, it&#8217;s had significant attention from the team for the last three weeks, but the fixes simply weren&#8217;t good enough.&nbsp; There&#8217;s been a recent outcry for increased transparency from us, and we&#8217;re committed to providing it, so here it goes:</p>
+
+<p>The issue is that in the summer, when you post an entry dated for the winter, the system compensates for the one hour difference so that the 7pm you input in the summer still means 7pm when winter rolls around and that entry needs to be published.</p>
+
+<p>In 1.x, this calculation was forced, and it worked (mostly) because 1.x&#8217;s dates were not real UTC/GMT dates.&nbsp; They were relative to the server time, and the localization faked it so that it seemed like real GMT dates, but if you ever moved an installation to a server in another time zone, there was potential that all of your dates would be wrong.&nbsp; We fixed this in 2.x, one of the largest database changes in the updater, fixing every timestamp in your installation to be a real GMT date.</p>
+
+<p>What got overlooked is this hack from 1.x to handle summer/winter entry dates described above, which remained hidden during beta and 2.1&#8217;s launch, undoubtedly because everyone&#8217;s system clocks were set for the winter (users and testers included), where this problem doesn&#8217;t exist.&nbsp; As soon as DST was back on, then it became noticeable.</p>
+
+<p>So it would seem like the fix is simple.&nbsp; 2.x uses real GMT dates, so this arbitrary addition/subtraction of one hour to make 7pm = 7pm at any time of the year shouldn&#8217;t be necessary anymore.&nbsp; And that&#8217;s true.&nbsp; But now we are at the complicated part that is a unique problem to ExpressionEngine and to 2.x: the &#8220;DST Active on Entry&#8221; and &#8220;Honor the Daylight Saving Time setting associated with each channel entry&#8221; settings.</p>
+
+<p>These two settings existed in 1.x to add fine grain control over time display between DST seasons.&nbsp; However, they&#8217;ve always been confusing for developers and users, and we&#8217;re pretty sure that most people don&#8217;t understand what they&#8217;re for, when to use them, and what the effects are of the combinations of those settings.&nbsp; If 2.x were a stand-alone product and we didn&#8217;t have to worry about upgrades from 1.x, we&#8217;d just remove these two settings.&nbsp; But alas, that&#8217;s not an option.&nbsp; There are both 1.x sites and 2.1 sites where publishers have fiddled with these settings to get the <em>results</em> they are looking for on the front end, but the actual date stored in the database is not modified.</p>
+
+<p>So the &#8220;correct&#8221; fix has the very negative impact of having all entries that publishers have used those settings to be off by an hour after updating to 2.1.1.&nbsp; Weighed in the balance, we&#8217;d rather have publishers continue watching dates closely on edit and working around this bug than we would suddenly breaking the dates for all of the entries on an entire site.&nbsp; So the fix for this issue is out until we can come up with a satisfactory way of determining not just what the date stored in the database is, but the <em>intent</em> the publisher had from when they edited the entry, and what settings they employed to achieve that.&nbsp; By reversing the old logic from those settings, we hope to bring those dates back to reality so that the simple correct fix to the problem works flawlessly.</p>
+
+<p>It&#8217;s doable, but it means lots and lots of testing on real world sites.&nbsp; Hence, we are releasing what we have now while continuing to work on this fix, so that other fixes and enhancements aren&#8217;t held hostage by this one bug.</p>
+
+<p>If there&#8217;s a small glimmer of light with respect to 2.x&#8217;s date issues this summer, it&#8217;s that the AM/PM bug is fixed.&nbsp; Small victories.&nbsp; In all seriousness, though, this release has significant improvements and many great new things, and we hope it marks an improvement and a beginning of restoration of trust, and we thank you for your patience with us on the DST entry date issue.
+</p>";}i:6;a:9:{s:5:"title";s:28:"Acknowledge, Identify, React";s:4:"link";s:66:"http://expressionengine.com/blog/entry/acknowledge_identify_react/";s:2:"dc";a:1:{s:7:"creator";s:11:"Derek Jones";}s:8:"category";s:18:"Developer BlogNews";s:8:"comments";s:66:"http://expressionengine.com/blog/entry/acknowledge_identify_react/";s:11:"description";s:3099:"<p>I&#8217;d like to take a moment to speak about the speed and quality of the past few release cycles.&nbsp; There&#8217;s no point in mincing words: it&#8217;s been less than what you and we have come to expect from EllisLab.&nbsp; If this has concerned you, double or triple that concern, and that&#8217;s how we feel.&nbsp; And we have a plan in motion to fix it.</p>
+
+<p>Solving this problem first required that we identify exactly what the cause was.&nbsp; We have talented developers who love our products and our community, so this was not something easily pinpointed.&nbsp; It required taking a big step back to look at both the composition of our team as well as the processes we were using as a company to help the team succeed.</p>
+
+<p>Oddly enough, our main proverbial threat is also our biggest success: wildly explosive growth.&nbsp; There was a time I can remember knowing just about every new user&#8217;s screen name, and active community members very well.&nbsp; Now there are often 1000+ new members each day across our three products&#8217; communities.&nbsp; Not only do we lose that opportunity for close and frequent communication, but it also exponentially increases the number of environments our software is used in, the ways in which it&#8217;s implemented, the diversity of expectation, the desired feature set, etc.&nbsp; </p>
+
+<p>Right now our biggest challenge is scaling our internal structure concurrently with the new growth we&#8217;re experiencing while sticking to our roots (no &#8220;going corporate&#8221;, no VC money). We want to keep the same spirit that EllisLab enjoyed when there were just three or four of us, while making adjustments to staff and work practices that will allow us to succeed alongside this significant growth (which we are thankful for). </p>
+
+<p>It is unrealistic to think that we can rise to this challenge without fundamentally changing aspects of how we work and how we communicate, both internally and with our Community. All of us at EllisLab are committed to throwing out what is bad, embracing what works, and continuing to work with the Community to make ExpressionEngine everything it can be. </p>
+
+<p>This leads us to good news. ExpressionEngine 2.1.1 is almost complete and represents the first of a few planned releases to 2.1.x whose primary purpose is to address bugs and prevent new bugs from creeping in.&nbsp; These releases will come relatively quickly before the team sinks its teeth into 2.2.</p>
+
+<p>Lastly, we&#8217;ll be hiring another developer soon. We&#8217;re looking for a talented developer to add to our primary dev team. If you&#8217;re interested in teaming up with EllisLab during this revamp and would love to start contributing to ExpressionEngine directly, get your resumés and code sample ready! We&#8217;ll announce it on the EE Blog and <a href="http://ellislab.com/company/jobs/">our jobs page</a> when we start formally accepting applications. We&#8217;ve already had several unsolicited applications and we certainly welcome more from those who don&#8217;t want to wait. Is that you? 
+</p>";s:4:"guid";s:81:"http://expressionengine.com/blog/entry/acknowledge_identify_react/#When:03:14:51Z";s:7:"pubdate";s:29:"Fri, 01 Oct 2010 03:14:51 GMT";s:7:"summary";s:3099:"<p>I&#8217;d like to take a moment to speak about the speed and quality of the past few release cycles.&nbsp; There&#8217;s no point in mincing words: it&#8217;s been less than what you and we have come to expect from EllisLab.&nbsp; If this has concerned you, double or triple that concern, and that&#8217;s how we feel.&nbsp; And we have a plan in motion to fix it.</p>
+
+<p>Solving this problem first required that we identify exactly what the cause was.&nbsp; We have talented developers who love our products and our community, so this was not something easily pinpointed.&nbsp; It required taking a big step back to look at both the composition of our team as well as the processes we were using as a company to help the team succeed.</p>
+
+<p>Oddly enough, our main proverbial threat is also our biggest success: wildly explosive growth.&nbsp; There was a time I can remember knowing just about every new user&#8217;s screen name, and active community members very well.&nbsp; Now there are often 1000+ new members each day across our three products&#8217; communities.&nbsp; Not only do we lose that opportunity for close and frequent communication, but it also exponentially increases the number of environments our software is used in, the ways in which it&#8217;s implemented, the diversity of expectation, the desired feature set, etc.&nbsp; </p>
+
+<p>Right now our biggest challenge is scaling our internal structure concurrently with the new growth we&#8217;re experiencing while sticking to our roots (no &#8220;going corporate&#8221;, no VC money). We want to keep the same spirit that EllisLab enjoyed when there were just three or four of us, while making adjustments to staff and work practices that will allow us to succeed alongside this significant growth (which we are thankful for). </p>
+
+<p>It is unrealistic to think that we can rise to this challenge without fundamentally changing aspects of how we work and how we communicate, both internally and with our Community. All of us at EllisLab are committed to throwing out what is bad, embracing what works, and continuing to work with the Community to make ExpressionEngine everything it can be. </p>
+
+<p>This leads us to good news. ExpressionEngine 2.1.1 is almost complete and represents the first of a few planned releases to 2.1.x whose primary purpose is to address bugs and prevent new bugs from creeping in.&nbsp; These releases will come relatively quickly before the team sinks its teeth into 2.2.</p>
+
+<p>Lastly, we&#8217;ll be hiring another developer soon. We&#8217;re looking for a talented developer to add to our primary dev team. If you&#8217;re interested in teaming up with EllisLab during this revamp and would love to start contributing to ExpressionEngine directly, get your resumés and code sample ready! We&#8217;ll announce it on the EE Blog and <a href="http://ellislab.com/company/jobs/">our jobs page</a> when we start formally accepting applications. We&#8217;ve already had several unsolicited applications and we certainly welcome more from those who don&#8217;t want to wait. Is that you? 
+</p>";}i:7;a:9:{s:5:"title";s:21:"Weekly #EECMS Roundup";s:4:"link";s:60:"http://expressionengine.com/blog/entry/weekly_eecms_roundup/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:60:"http://expressionengine.com/blog/entry/weekly_eecms_roundup/";s:11:"description";s:3093:"<p>Another great <a href="http://search.twitter.com/search?q=%23eecms">#EECMS</a> week! Let&#8217;s see what happened:</p>
+
+<h3>Articles</h3><p>
+<a href="http://designtutorials4u.com/25-beautiful-websites-built-with-expression-engine/">25 Of The Most Beautiful Websites Built With ExpressionEngine</a> by Designtutorials4U.<br />
+<a href="http://www.madebyhippo.com/herdspeak/view/customising_your_ee2_cp_login">Customizing your ExpressionEngine 2 Control Panel</a>.<br />
+<a href="http://loweblog.com/freelance/article/nesting-tags-and-performance-in-ee/">Nested Tags and Performance in EE</a>.<br />
+<a href="http://feistygoat.com/blog/2010/09/expressionengine-2-1-win/">ExpressionEngine 2.1 = WIN</a>.<br />
+<a href="http://www.macworld.com/article/154221/2010/09/expression_engine_ipad_iphone.html">Macworld&#8217;s iExpression 1.3 enhances ExpressionEngine support</a>.<br />
+<a href="http://armitageonline.co.uk/blog/post/how_to_create_a_image_slider_with_expressionengine">How to create an image slider in ExpressionEngine</a>.<br />
+<a href="http://net.tutsplus.com/tutorials/php/how-to-sell-digital-goods-with-codeigniter-new-premium-tutorial/">How to sell digital goods with CodeIgniter</a>.</p>
+
+<h3>Major Announcements by our Community Partners</h3><p>
+<a href="http://devot-ee.com/news/item/add-on-support-on-devotee/">Add-on Support on Devot-EE</a>.</p>
+
+<p>
+</p><h3>Add-ons</h3><p>
+A quick bookmarklet for creating test members in EE 2.x CP. (for testing only!) <a href="http://bit.ly/cecc8n">http://bit.ly/cecc8n</a><br />
+<a href="http://dukt.fr/en/addons/video-player">Social Video for ExpressionEngine</a>.<br />
+<a href="http://expressionengine.com/forums/viewthread/163442/">EECK: Powerful, free CK Editor &amp; CK Finder Fieldtypes for EE 2.1</a>.<br />
+<a href="http://expressionengine.com/forums/viewthread/166852/">EESuite: Ecommerce &amp; More For Your EE Site(s) 100% FREE.</a><br />
+<a href="http://www.madebyhippo.com/addon-shack/view/hippo_date_time_language_converter">Hippo Date/Time Language Converter</a>.</p>
+
+<h3>Podcasts</h3><p>
+<a href="http://fortysevenmedia.com/blog/archives/tkas_episode_5/">The Kick Awesome Show Episode 5</a>. *A must watch. Nate is high and hi-larious. My favorite show to date.<br />
+<a href="http://screenr.com/uhG">WYMeditor for ExpressionEngine version 2.3</a>.</p>
+
+<h3>Books</h3><p>
+<a href="http://www.novatec.com.br/livros/codeigniter/">CodeIgniter Framework PHP</a> is out! It&#8217;s a Brazilian book for and by CI gurus.</p>
+
+<h3>EllisLab</h3><p>
+We did a <a href="http://expressionengine.com/blog/entry/quick_win_a_ticket_to_eeci_europe_a_24_hour_give-away/">give-away</a> for <a href="http://eeciconf.com">EECI tickets</a> and announced the <a href="http://expressionengine.com/blog/entry/winners_and_losers_of_the_eeci_europe_tickets_announced/">winners</a>. </p>
+
+<p>Think we missed something? <a href="http://expressionengine.com/forums/viewthread/168428/ ">Drop it in the forum</a>!</p>
+
+<p>Next week&#8217;s roundup? From Leiden! You can find John Henry, Leslie Doherty, and Greg Salt there. Give us a shout! 
+</p>";s:4:"guid";s:75:"http://expressionengine.com/blog/entry/weekly_eecms_roundup/#When:23:46:17Z";s:7:"pubdate";s:29:"Fri, 24 Sep 2010 23:46:17 GMT";s:7:"summary";s:3093:"<p>Another great <a href="http://search.twitter.com/search?q=%23eecms">#EECMS</a> week! Let&#8217;s see what happened:</p>
+
+<h3>Articles</h3><p>
+<a href="http://designtutorials4u.com/25-beautiful-websites-built-with-expression-engine/">25 Of The Most Beautiful Websites Built With ExpressionEngine</a> by Designtutorials4U.<br />
+<a href="http://www.madebyhippo.com/herdspeak/view/customising_your_ee2_cp_login">Customizing your ExpressionEngine 2 Control Panel</a>.<br />
+<a href="http://loweblog.com/freelance/article/nesting-tags-and-performance-in-ee/">Nested Tags and Performance in EE</a>.<br />
+<a href="http://feistygoat.com/blog/2010/09/expressionengine-2-1-win/">ExpressionEngine 2.1 = WIN</a>.<br />
+<a href="http://www.macworld.com/article/154221/2010/09/expression_engine_ipad_iphone.html">Macworld&#8217;s iExpression 1.3 enhances ExpressionEngine support</a>.<br />
+<a href="http://armitageonline.co.uk/blog/post/how_to_create_a_image_slider_with_expressionengine">How to create an image slider in ExpressionEngine</a>.<br />
+<a href="http://net.tutsplus.com/tutorials/php/how-to-sell-digital-goods-with-codeigniter-new-premium-tutorial/">How to sell digital goods with CodeIgniter</a>.</p>
+
+<h3>Major Announcements by our Community Partners</h3><p>
+<a href="http://devot-ee.com/news/item/add-on-support-on-devotee/">Add-on Support on Devot-EE</a>.</p>
+
+<p>
+</p><h3>Add-ons</h3><p>
+A quick bookmarklet for creating test members in EE 2.x CP. (for testing only!) <a href="http://bit.ly/cecc8n">http://bit.ly/cecc8n</a><br />
+<a href="http://dukt.fr/en/addons/video-player">Social Video for ExpressionEngine</a>.<br />
+<a href="http://expressionengine.com/forums/viewthread/163442/">EECK: Powerful, free CK Editor &amp; CK Finder Fieldtypes for EE 2.1</a>.<br />
+<a href="http://expressionengine.com/forums/viewthread/166852/">EESuite: Ecommerce &amp; More For Your EE Site(s) 100% FREE.</a><br />
+<a href="http://www.madebyhippo.com/addon-shack/view/hippo_date_time_language_converter">Hippo Date/Time Language Converter</a>.</p>
+
+<h3>Podcasts</h3><p>
+<a href="http://fortysevenmedia.com/blog/archives/tkas_episode_5/">The Kick Awesome Show Episode 5</a>. *A must watch. Nate is high and hi-larious. My favorite show to date.<br />
+<a href="http://screenr.com/uhG">WYMeditor for ExpressionEngine version 2.3</a>.</p>
+
+<h3>Books</h3><p>
+<a href="http://www.novatec.com.br/livros/codeigniter/">CodeIgniter Framework PHP</a> is out! It&#8217;s a Brazilian book for and by CI gurus.</p>
+
+<h3>EllisLab</h3><p>
+We did a <a href="http://expressionengine.com/blog/entry/quick_win_a_ticket_to_eeci_europe_a_24_hour_give-away/">give-away</a> for <a href="http://eeciconf.com">EECI tickets</a> and announced the <a href="http://expressionengine.com/blog/entry/winners_and_losers_of_the_eeci_europe_tickets_announced/">winners</a>. </p>
+
+<p>Think we missed something? <a href="http://expressionengine.com/forums/viewthread/168428/ ">Drop it in the forum</a>!</p>
+
+<p>Next week&#8217;s roundup? From Leiden! You can find John Henry, Leslie Doherty, and Greg Salt there. Give us a shout! 
+</p>";}i:8;a:9:{s:5:"title";s:56:"Quick! Win a ticket to EECI Europe! A 24 hour give-away.";s:4:"link";s:93:"http://expressionengine.com/blog/entry/quick_win_a_ticket_to_eeci_europe_a_24_hour_give-away/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:93:"http://expressionengine.com/blog/entry/quick_win_a_ticket_to_eeci_europe_a_24_hour_give-away/";s:11:"description";s:1473:"<p>Want to go to Leiden for <a href="http://eeciconf.com/">EECI</a> but don’t have a conference pass? Able to get to The Netherlands next week? Here’s your chance! You have 24 hours to get your comments in before polls close 9/22 at 06:00 PST. ( -8 GMT)</p>
+
+<h3>What we’re giving away:</h3>
+
+<p>One ticket to EECI Europe.</p>
+
+<p>A small travel stipend (think train pass).</p>
+
+<p>A T-shirt for proud winner.</p>
+
+<h3>Here’s how you enter:</h3>
+
+<p>One Entrance Per Individual:<br />
+<a href="http://expressionengine.com/forums/viewthread/168050/">Leave a comment</a> with a link to your favorite ExpressionEngine site you built.</p>
+
+<p>One Additional Entrance Allowed:<br />
+Tweet your favorite thing about ExpressionEngine and tag it with #eeci. <a href="http://expressionengine.com/forums/viewthread/168050/">Leave one comment</a> linked to your tweet.</p>
+
+<h3>How we decide:</h3>
+
+<p>Winner will be chosen my number randomizer. Do both methods and up your chance of winning.</p>
+
+<h3>When polls close:</h3>
+
+<p>September 22 at 06:00 PST.</p>
+
+<h3>What if you can’t make it?</h3>
+
+<p>We’ll do this again before EECI New York, but much earlier to give you a chance to participate. Sometimes great ideas come in the 20th hour, or in this case, the 20th of September.</p>
+
+<p>On your mark? Get set? GO!</p>
+
+<p>**Thank you to everyone who <a href="http://twitter.com/EllisLab/status/25046572458">participated in the twitter poll</a> expressing interest!
+</p>";s:4:"guid";s:108:"http://expressionengine.com/blog/entry/quick_win_a_ticket_to_eeci_europe_a_24_hour_give-away/#When:12:50:04Z";s:7:"pubdate";s:29:"Tue, 21 Sep 2010 12:50:04 GMT";s:7:"summary";s:1473:"<p>Want to go to Leiden for <a href="http://eeciconf.com/">EECI</a> but don’t have a conference pass? Able to get to The Netherlands next week? Here’s your chance! You have 24 hours to get your comments in before polls close 9/22 at 06:00 PST. ( -8 GMT)</p>
+
+<h3>What we’re giving away:</h3>
+
+<p>One ticket to EECI Europe.</p>
+
+<p>A small travel stipend (think train pass).</p>
+
+<p>A T-shirt for proud winner.</p>
+
+<h3>Here’s how you enter:</h3>
+
+<p>One Entrance Per Individual:<br />
+<a href="http://expressionengine.com/forums/viewthread/168050/">Leave a comment</a> with a link to your favorite ExpressionEngine site you built.</p>
+
+<p>One Additional Entrance Allowed:<br />
+Tweet your favorite thing about ExpressionEngine and tag it with #eeci. <a href="http://expressionengine.com/forums/viewthread/168050/">Leave one comment</a> linked to your tweet.</p>
+
+<h3>How we decide:</h3>
+
+<p>Winner will be chosen my number randomizer. Do both methods and up your chance of winning.</p>
+
+<h3>When polls close:</h3>
+
+<p>September 22 at 06:00 PST.</p>
+
+<h3>What if you can’t make it?</h3>
+
+<p>We’ll do this again before EECI New York, but much earlier to give you a chance to participate. Sometimes great ideas come in the 20th hour, or in this case, the 20th of September.</p>
+
+<p>On your mark? Get set? GO!</p>
+
+<p>**Thank you to everyone who <a href="http://twitter.com/EllisLab/status/25046572458">participated in the twitter poll</a> expressing interest!
+</p>";}i:9;a:9:{s:5:"title";s:29:"This Week in #EECMS - Roundup";s:4:"link";s:68:"http://expressionengine.com/blog/entry/this_week_in_eecms_-_roundup/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:68:"http://expressionengine.com/blog/entry/this_week_in_eecms_-_roundup/";s:11:"description";s:2947:"<p>This week was a busy one for the #EECMS community. Here we begin a once-a-week roundup of the happenings.</p>
+
+<h3>Articles</h3><p>
+<a href="http://www.encaffeinated.com/articles/view/how_to_skin_an_expressionengine_website_in_one_easy_step/">Encaffeinated &#8220;How to skin an ExpressionEngine Website in One Easy Step.&#8221;</a><br />
+<a href="http://expressionengine-addons.com/nsm-better-meta/user-guide">NSM Better Meta Full Instruction Guide for EE2</a><br />
+<a href="http://www.ngenworks.com/blog/detail/expressionengine_and_previous_next/">nGen Works: ExpressionEngine and Previous/Next</a><br />
+<a href="http://eeinsider.com/blog/new-free-e-commerce-add-on/">New, Free, E-commerce Add-on</a><br />
+<a href="http://eetemplates.com/index.php/blog/comments/a_primer_on_fighting_backlink_spam_for_expressionengine/">A primer on fighting backlink spam for ExpressionEngine</a></p>
+
+<h3>Add-ons</h3><p>
+<a href="http://pixelandtonic.com/wygwam/releasenotes">Wygwam 2.1.3</a><br />
+<a href="http://expressionengine-addons.com/lg-twitter/release-notes">LG Twitter 2.1.1</a><br />
+<a href="http://getsparkplugs.com/taggable/releasenotes">Taggable</a><br />
+<a href="http://loweblog.com/software/low-reorder/changelog/">Low Reorder</a><br />
+<a href="http://expressionengine.com/forums/viewthread/166656/">Time Ago and Youku EE</a><br />
+<a href="http://eeinsider.com/blog/your-weekly-devotee-september-16-2010/">EE-Insider&#8217;s Weekly Devot-EE</a></p>
+
+<h3>Podcasts</h3><p>
+<a href="http://5by5.tv/eepodcast/30">The ExpressionEngine Podcast #30: Debugging Basics</a></p>
+
+<h3>Books</h3><p>
+<a href="http://mijingo.com/ebooklets/securing-expressionengine-2">Securing ExpressionEngine 2 by Mark Hout</a><br />
+<img src="http://expressionengine.com/files/blog/secureEE.jpg" alt="desc" width="200" height="260" /></p>
+
+<h3>Themes</h3><p>
+<a href="http://expressionengine.com/forums/viewthread/167681/">Scaffolding Forum Theme</a></p>
+
+<h3>EllisLab</h3><p>
+At EllisLab, we sent off one <a href="http://expressionengine.com/blog/entry/a_fond_sendoff_for_the_mighty_derek_allard/">mighty Derek Allard</a>. Our very own John Henry&#8217;s Holler was a <a href="http://www.campaignmonitor.com/blog/post/3260/holler-case-study/">case study at CampaignMonitor</a>.&nbsp; We interviewed a design team about their <a href="http://expressionengine.com/showcase/read/ovation_guitars/">Showcase entry</a> and we pumped you up for <a href="http://expressionengine.com/blog/entry/top_seven_reasons_to_go_to_eeci_europe_in_leiden/">EECI Europe</a>. Next week you can look forward to winning a pass to <a href="http://eeciconf.com">EECI</a> yourself.</p>
+
+<h3>Bonus</h3><p>
+Please don&#8217;t forget to fill out Leevi Graham&#8217;s <a href="http://newism.wufoo.com/forms/addon-developers-survey/">Addon Developers Survey</a>. </p>
+
+<p>Think we missed something? <a href="http://expressionengine.com/forums/viewthread/167777/">Drop it in the forum</a>!
+</p>";s:4:"guid";s:83:"http://expressionengine.com/blog/entry/this_week_in_eecms_-_roundup/#When:21:01:19Z";s:7:"pubdate";s:29:"Fri, 17 Sep 2010 21:01:19 GMT";s:7:"summary";s:2947:"<p>This week was a busy one for the #EECMS community. Here we begin a once-a-week roundup of the happenings.</p>
+
+<h3>Articles</h3><p>
+<a href="http://www.encaffeinated.com/articles/view/how_to_skin_an_expressionengine_website_in_one_easy_step/">Encaffeinated &#8220;How to skin an ExpressionEngine Website in One Easy Step.&#8221;</a><br />
+<a href="http://expressionengine-addons.com/nsm-better-meta/user-guide">NSM Better Meta Full Instruction Guide for EE2</a><br />
+<a href="http://www.ngenworks.com/blog/detail/expressionengine_and_previous_next/">nGen Works: ExpressionEngine and Previous/Next</a><br />
+<a href="http://eeinsider.com/blog/new-free-e-commerce-add-on/">New, Free, E-commerce Add-on</a><br />
+<a href="http://eetemplates.com/index.php/blog/comments/a_primer_on_fighting_backlink_spam_for_expressionengine/">A primer on fighting backlink spam for ExpressionEngine</a></p>
+
+<h3>Add-ons</h3><p>
+<a href="http://pixelandtonic.com/wygwam/releasenotes">Wygwam 2.1.3</a><br />
+<a href="http://expressionengine-addons.com/lg-twitter/release-notes">LG Twitter 2.1.1</a><br />
+<a href="http://getsparkplugs.com/taggable/releasenotes">Taggable</a><br />
+<a href="http://loweblog.com/software/low-reorder/changelog/">Low Reorder</a><br />
+<a href="http://expressionengine.com/forums/viewthread/166656/">Time Ago and Youku EE</a><br />
+<a href="http://eeinsider.com/blog/your-weekly-devotee-september-16-2010/">EE-Insider&#8217;s Weekly Devot-EE</a></p>
+
+<h3>Podcasts</h3><p>
+<a href="http://5by5.tv/eepodcast/30">The ExpressionEngine Podcast #30: Debugging Basics</a></p>
+
+<h3>Books</h3><p>
+<a href="http://mijingo.com/ebooklets/securing-expressionengine-2">Securing ExpressionEngine 2 by Mark Hout</a><br />
+<img src="http://expressionengine.com/files/blog/secureEE.jpg" alt="desc" width="200" height="260" /></p>
+
+<h3>Themes</h3><p>
+<a href="http://expressionengine.com/forums/viewthread/167681/">Scaffolding Forum Theme</a></p>
+
+<h3>EllisLab</h3><p>
+At EllisLab, we sent off one <a href="http://expressionengine.com/blog/entry/a_fond_sendoff_for_the_mighty_derek_allard/">mighty Derek Allard</a>. Our very own John Henry&#8217;s Holler was a <a href="http://www.campaignmonitor.com/blog/post/3260/holler-case-study/">case study at CampaignMonitor</a>.&nbsp; We interviewed a design team about their <a href="http://expressionengine.com/showcase/read/ovation_guitars/">Showcase entry</a> and we pumped you up for <a href="http://expressionengine.com/blog/entry/top_seven_reasons_to_go_to_eeci_europe_in_leiden/">EECI Europe</a>. Next week you can look forward to winning a pass to <a href="http://eeciconf.com">EECI</a> yourself.</p>
+
+<h3>Bonus</h3><p>
+Please don&#8217;t forget to fill out Leevi Graham&#8217;s <a href="http://newism.wufoo.com/forms/addon-developers-survey/">Addon Developers Survey</a>. </p>
+
+<p>Think we missed something? <a href="http://expressionengine.com/forums/viewthread/167777/">Drop it in the forum</a>!
+</p>";}i:10;a:9:{s:5:"title";s:42:"A Fond Sendoff for the Mighty Derek Allard";s:4:"link";s:82:"http://expressionengine.com/blog/entry/a_fond_sendoff_for_the_mighty_derek_allard/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Camacho";}s:8:"category";s:4:"News";s:8:"comments";s:82:"http://expressionengine.com/blog/entry/a_fond_sendoff_for_the_mighty_derek_allard/";s:11:"description";s:1142:"<p>Today, with a sad heart, we bid goodbye to Derek Allard, who has served as Technology Architect for EllisLab for the past two years. Although we knew this day was coming, and appreciate the efforts to ensure that the transition would be a smooth one, it&#8217;s a difficult day for us nonetheless. </p>
+
+<p>Two years ago Derek emerged in our CodeIgniter community as an incredibly friendly, passionate, and adept user, so adding him to our staff became a natural step. During his tenure he played an important role in CodeIgniter and ExpressionEngine 2.0&#8217;s development, and more recently he served as a key developer for the MojoMotor project.</p>
+
+<p>Although Derek&#8217;s versatility made him adept in a variety of roles, even &#8220;on the stump&#8221; during our keynote at EECI 2010, it will be his cheerful, friendly, and good-natiured attitude that will missed the most. He has always provided a spark and passion for EllisLab and our Community.</p>
+
+<p>On behalf of Rick Ellis, Derek Jones, and the rest of the EllisLab team, we want to publicly thank him for all he&#8217;s done for us. You&#8217;ll be missed, Derek! 
+</p>";s:4:"guid";s:97:"http://expressionengine.com/blog/entry/a_fond_sendoff_for_the_mighty_derek_allard/#When:00:49:50Z";s:7:"pubdate";s:29:"Tue, 14 Sep 2010 00:49:50 GMT";s:7:"summary";s:1142:"<p>Today, with a sad heart, we bid goodbye to Derek Allard, who has served as Technology Architect for EllisLab for the past two years. Although we knew this day was coming, and appreciate the efforts to ensure that the transition would be a smooth one, it&#8217;s a difficult day for us nonetheless. </p>
+
+<p>Two years ago Derek emerged in our CodeIgniter community as an incredibly friendly, passionate, and adept user, so adding him to our staff became a natural step. During his tenure he played an important role in CodeIgniter and ExpressionEngine 2.0&#8217;s development, and more recently he served as a key developer for the MojoMotor project.</p>
+
+<p>Although Derek&#8217;s versatility made him adept in a variety of roles, even &#8220;on the stump&#8221; during our keynote at EECI 2010, it will be his cheerful, friendly, and good-natiured attitude that will missed the most. He has always provided a spark and passion for EllisLab and our Community.</p>
+
+<p>On behalf of Rick Ellis, Derek Jones, and the rest of the EllisLab team, we want to publicly thank him for all he&#8217;s done for us. You&#8217;ll be missed, Derek! 
+</p>";}i:11;a:9:{s:5:"title";s:42:"Press Release: New ExpressionEngine 2 Book";s:4:"link";s:81:"http://expressionengine.com/blog/entry/press_release_new_expressionengine_2_book/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:81:"http://expressionengine.com/blog/entry/press_release_new_expressionengine_2_book/";s:11:"description";s:2120:"<p><em>Building an ExpressionEngine 2 Site - Small Business</em></p>
+
+<p>Holland, MI - Web designers and developers looking for resources on learning ExpressionEngine 2 have a new resource available: <em>Building an ExpressionEngine 2 Site - Small Business</em> available now from <a href="http://www.train-ee.com">Train-ee.com</a>.</p>
+
+<p><a href="http://www.train-ee.com">Train-ee.com</a> was founded in early 2008 with the sole purpose of helping people learn ExpressionEngine fast.&nbsp; <em>Building an ExpressionEngine 2 Site - Small Business</em> is a revised and expanded version of Train-ee&#8217;s first ExpressionEngine book offering.</p>
+
+<p>In addition to showing a step-by-step process for building a complete small business website, the revised version of the book adds chapters on 404 management, improving site performance, configuring for client access, and extending ExpressionEngine with 3rd-party add-ons.</p>
+
+<p>Initial reviews of the book have been favorable:<br />
+&#8220;Love the book! Like the first edition, it’s realistic, easy to follow and a supremely useful resource for EE developers new and seasoned. Super rad!&#8221; <br />
+Jenn Lukas, Happy Cog</p>
+
+<p>&#8220;A terrific resource - there were a number of times I stopped and said “no s**t”.&#8221;<br />
+Paul Burton, 16toads Design</p>
+
+<p>&#8220;I was really impressed with what you covered and how practical it is.&#8221;<br />
+Emily Lewis, Emily Lewis Design</p>
+
+<p>The 362 page book is complimented by over 140 screen captures and organized into 28 chapters.&nbsp; <em><a href="http://www.train-ee.com/courseware/books/detail/building-an-expressionengine-2-site-small-business/">Building an ExpressionEngine 2 Site - Small Business</a></em> is available immediately from Train-ee.com as a PDF, with a print version available through Lulu.com.&nbsp; A ePub versions is in development.</p>
+
+<p><a href="http://www.train-ee.com/courseware/books/detail/building-an-expressionengine-2-site-small-business/"><img src="http://expressionengine.com/files/blog/bees2_250-250x330.png" alt="desc" width="250" height="330" /></a>
+</p>";s:4:"guid";s:96:"http://expressionengine.com/blog/entry/press_release_new_expressionengine_2_book/#When:20:57:24Z";s:7:"pubdate";s:29:"Fri, 03 Sep 2010 20:57:24 GMT";s:7:"summary";s:2120:"<p><em>Building an ExpressionEngine 2 Site - Small Business</em></p>
+
+<p>Holland, MI - Web designers and developers looking for resources on learning ExpressionEngine 2 have a new resource available: <em>Building an ExpressionEngine 2 Site - Small Business</em> available now from <a href="http://www.train-ee.com">Train-ee.com</a>.</p>
+
+<p><a href="http://www.train-ee.com">Train-ee.com</a> was founded in early 2008 with the sole purpose of helping people learn ExpressionEngine fast.&nbsp; <em>Building an ExpressionEngine 2 Site - Small Business</em> is a revised and expanded version of Train-ee&#8217;s first ExpressionEngine book offering.</p>
+
+<p>In addition to showing a step-by-step process for building a complete small business website, the revised version of the book adds chapters on 404 management, improving site performance, configuring for client access, and extending ExpressionEngine with 3rd-party add-ons.</p>
+
+<p>Initial reviews of the book have been favorable:<br />
+&#8220;Love the book! Like the first edition, it’s realistic, easy to follow and a supremely useful resource for EE developers new and seasoned. Super rad!&#8221; <br />
+Jenn Lukas, Happy Cog</p>
+
+<p>&#8220;A terrific resource - there were a number of times I stopped and said “no s**t”.&#8221;<br />
+Paul Burton, 16toads Design</p>
+
+<p>&#8220;I was really impressed with what you covered and how practical it is.&#8221;<br />
+Emily Lewis, Emily Lewis Design</p>
+
+<p>The 362 page book is complimented by over 140 screen captures and organized into 28 chapters.&nbsp; <em><a href="http://www.train-ee.com/courseware/books/detail/building-an-expressionengine-2-site-small-business/">Building an ExpressionEngine 2 Site - Small Business</a></em> is available immediately from Train-ee.com as a PDF, with a print version available through Lulu.com.&nbsp; A ePub versions is in development.</p>
+
+<p><a href="http://www.train-ee.com/courseware/books/detail/building-an-expressionengine-2-site-small-business/"><img src="http://expressionengine.com/files/blog/bees2_250-250x330.png" alt="desc" width="250" height="330" /></a>
+</p>";}i:12;a:9:{s:5:"title";s:48:"An Interview With CodeIgniter Guru Phil Sturgeon";s:4:"link";s:88:"http://expressionengine.com/blog/entry/an_interview_with_codeignitor_guru_phil_sturgeon/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:88:"http://expressionengine.com/blog/entry/an_interview_with_codeignitor_guru_phil_sturgeon/";s:11:"description";s:3172:"<p>Did you miss <a href="http://cicon2010.com/">CICON2010</a>? We have a short interview with Phil Sturgeon, talking about the good, the bad, and what you can expect from the CodeIgniter community in future events.</p>
+
+<p>EllisLab, “Phil, how was the first CICON?”</p>
+
+<p>Phil, “There was a bit of a rocky start with some technical difficulties, but even with those obstacles, we had a great, productive first day. Kevin Prince and Joel Gasgoine gave brilliant talks that everyone enjoyed, and Elliot Haughin had everyone laughing for his entire talk with his extreme clip-art usage and randomness.”</p>
+
+<p>EllisLab, “Were there a lot of beginners, or mostly experienced CodeIgniter guys?”</p>
+
+<p>Phil, “We had a lot of experienced developers. There was a Q&amp;A session where attendees could ask ANYTHING about CodeIgniter. With Dean and I together, we gave answers to loads of questions where I think everyone learned a lot of new tips, tricks, methods and practices.”</p>
+
+<p>EllisLab, “What type of experienced users are you hoping come to future events?”</p>
+
+<p>Phil, “The first conference was aimed purely at the existing community to get people together. We’ve had lots of feedback from people saying they now feel like part of the community when they hadn’t before. That’s brilliant and we want to keep that going for the next community but we also want to aim higher. The next round of conferences will contain two tracks. Beginners and Advanced. We may need to work on the names for these but the basic idea is we run talks and masterclasses for people new to CodeIgniter who want to learn how to use it, and for the experienced users we can show them how to do some crazy stuff that will help in their day-to-day usage of CodeIgniter.”</p>
+
+<p>EllisLab, “What topics are you focusing on?”</p>
+
+<p>Phil, “The two tracks will obviously involve some pretty different content. For the first track we’ll be going through setting up CodeIgniter, integrating third party classes and code, getting things running on different servers and explaining how MVC can help with your applications. The more advanced track will be focusing on things like making content management systems, building API’s, creating multi-lingual systems, building mobile versions of your sites, and more.”</p>
+
+<p>EllisLab, &#8220;What kinds of demos are you planning? &#8220;</p>
+
+<p>Phil, “We’ll be running some demos of some of the top commercial CodeIgniter applications out there. Like this year we’ll be running a MojoMotor demo with some hands on sessions along with demos of some new applications like Pancake (http://pancakeapp.com/), iClassEngine (http://iclassengine.com/) and others).”</p>
+
+<p>EllisLab, “So you are planning many more conferences like this?”</p>
+
+<p>Phil, “Yes! We’re going to make this a global event. There will be three conferences, Holland, UK and Philadelphia in the States. We’ve learned a lot from our first go and with all the community feedback, we’re planning an amazing upcoming group of master-classes, talks, code share and more. We’re really excited about the upcoming year!”
+</p>";s:4:"guid";s:103:"http://expressionengine.com/blog/entry/an_interview_with_codeignitor_guru_phil_sturgeon/#When:19:39:43Z";s:7:"pubdate";s:29:"Wed, 01 Sep 2010 19:39:43 GMT";s:7:"summary";s:3172:"<p>Did you miss <a href="http://cicon2010.com/">CICON2010</a>? We have a short interview with Phil Sturgeon, talking about the good, the bad, and what you can expect from the CodeIgniter community in future events.</p>
+
+<p>EllisLab, “Phil, how was the first CICON?”</p>
+
+<p>Phil, “There was a bit of a rocky start with some technical difficulties, but even with those obstacles, we had a great, productive first day. Kevin Prince and Joel Gasgoine gave brilliant talks that everyone enjoyed, and Elliot Haughin had everyone laughing for his entire talk with his extreme clip-art usage and randomness.”</p>
+
+<p>EllisLab, “Were there a lot of beginners, or mostly experienced CodeIgniter guys?”</p>
+
+<p>Phil, “We had a lot of experienced developers. There was a Q&amp;A session where attendees could ask ANYTHING about CodeIgniter. With Dean and I together, we gave answers to loads of questions where I think everyone learned a lot of new tips, tricks, methods and practices.”</p>
+
+<p>EllisLab, “What type of experienced users are you hoping come to future events?”</p>
+
+<p>Phil, “The first conference was aimed purely at the existing community to get people together. We’ve had lots of feedback from people saying they now feel like part of the community when they hadn’t before. That’s brilliant and we want to keep that going for the next community but we also want to aim higher. The next round of conferences will contain two tracks. Beginners and Advanced. We may need to work on the names for these but the basic idea is we run talks and masterclasses for people new to CodeIgniter who want to learn how to use it, and for the experienced users we can show them how to do some crazy stuff that will help in their day-to-day usage of CodeIgniter.”</p>
+
+<p>EllisLab, “What topics are you focusing on?”</p>
+
+<p>Phil, “The two tracks will obviously involve some pretty different content. For the first track we’ll be going through setting up CodeIgniter, integrating third party classes and code, getting things running on different servers and explaining how MVC can help with your applications. The more advanced track will be focusing on things like making content management systems, building API’s, creating multi-lingual systems, building mobile versions of your sites, and more.”</p>
+
+<p>EllisLab, &#8220;What kinds of demos are you planning? &#8220;</p>
+
+<p>Phil, “We’ll be running some demos of some of the top commercial CodeIgniter applications out there. Like this year we’ll be running a MojoMotor demo with some hands on sessions along with demos of some new applications like Pancake (http://pancakeapp.com/), iClassEngine (http://iclassengine.com/) and others).”</p>
+
+<p>EllisLab, “So you are planning many more conferences like this?”</p>
+
+<p>Phil, “Yes! We’re going to make this a global event. There will be three conferences, Holland, UK and Philadelphia in the States. We’ve learned a lot from our first go and with all the community feedback, we’re planning an amazing upcoming group of master-classes, talks, code share and more. We’re really excited about the upcoming year!”
+</p>";}i:13;a:9:{s:5:"title";s:51:"Members Submitting Panels at SXSW: Promote and Vote";s:4:"link";s:90:"http://expressionengine.com/blog/entry/members_submitting_panels_at_sxsw_promote_and_vote/";s:2:"dc";a:1:{s:7:"creator";s:14:"Leslie Doherty";}s:8:"category";s:4:"News";s:8:"comments";s:90:"http://expressionengine.com/blog/entry/members_submitting_panels_at_sxsw_promote_and_vote/";s:11:"description";s:959:"<p>Many of our community members are submitting panels for SXSW this coming year. Having never been to SXSW, (What?! It’s true. I know. I hear it’s fabulous And.All.That.) I’m hoping to make it this coming year to see first-hand the chaos and splendid educational discussions that occur there.</p>
+
+<p>Seeing the panels come up on Twitter, connected with a “go vote for this!” gave me an idea: Why not promote our community member’s panels here in our forums? I&#8217;ve heard so many of you speak at various events like <a href="http://eeciconf.com">EECI</a>, I know that I, personally, want to see more people exposed to what you have to say.</p>
+
+<p>So if you’re submitting a panel and would like to share it with our community, please promote it in <a href="http://expressionengine.com/forums/viewthread/164090/">this forum thread</a>. Without sounding too cheesy, I hope to see you all speak this year. I always learn so much from you.
+</p>";s:4:"guid";s:105:"http://expressionengine.com/blog/entry/members_submitting_panels_at_sxsw_promote_and_vote/#When:17:36:17Z";s:7:"pubdate";s:29:"Thu, 12 Aug 2010 17:36:17 GMT";s:7:"summary";s:959:"<p>Many of our community members are submitting panels for SXSW this coming year. Having never been to SXSW, (What?! It’s true. I know. I hear it’s fabulous And.All.That.) I’m hoping to make it this coming year to see first-hand the chaos and splendid educational discussions that occur there.</p>
+
+<p>Seeing the panels come up on Twitter, connected with a “go vote for this!” gave me an idea: Why not promote our community member’s panels here in our forums? I&#8217;ve heard so many of you speak at various events like <a href="http://eeciconf.com">EECI</a>, I know that I, personally, want to see more people exposed to what you have to say.</p>
+
+<p>So if you’re submitting a panel and would like to share it with our community, please promote it in <a href="http://expressionengine.com/forums/viewthread/164090/">this forum thread</a>. Without sounding too cheesy, I hope to see you all speak this year. I always learn so much from you.
+</p>";}i:14;a:9:{s:5:"title";s:46:"Third Party Add-on Policies for the New Forums";s:4:"link";s:86:"http://expressionengine.com/blog/entry/third_party_add-on_policies_for_the_new_forums/";s:2:"dc";a:1:{s:7:"creator";s:11:"Derek Jones";}s:8:"category";s:18:"Developer BlogNews";s:8:"comments";s:86:"http://expressionengine.com/blog/entry/third_party_add-on_policies_for_the_new_forums/";s:11:"description";s:4765:"<p>Today we are introducing two new changes to our Community Forums to help people find new add-ons and to ensure that people have a better support experience with third party add-ons. </p>
+
+<p>First, we are changing the &#8220;Site Introduction&#8221; forum to the <a href="http://expressionengine.com/forums/viewforum/97/">Community News</a> forum.&nbsp; In this forum you can announce your new ExpressionEngine powered site, add-on, or other related product or service.&nbsp; Additionally we have a program in development that will enable developers to reach the Community through the ExpressionEngine Blog. We will provide details at a later date once we take this service live.</p>
+
+<p>Second, starting today we are no longer allowing third party developers to host or provide technical support for third party add-ons directly on the ExpressionEngine Forums. We encourage you to tell people about your add-on on the Community News Forum, and answer questions people may have about its purpose, but you must provide your own hosting and support for your add-on. We are confident that this is a win for you and the community.</p>
+
+<p>With our site refresh we looked closely at all forum activity, and for the developer forums, we saw a need to go back to the drawing board.&nbsp; From the beginning, the goal of the development forums was to allow developers to ask questions that would then be answered either by EllisLab developers or fellow third party developers.&nbsp; Because we split the forums up by add-on type and due to a lack of good alternatives, these desirable programming conversations got buried in add-on announcements and user support.</p>
+
+<p>Simplification was in order to provide a space that could focus on the technically minded discussions of <a href="http://expressionengine.com/forums/viewforum/116/">Development and Programming</a>, as they pertain to ExpressionEngine.&nbsp; Now there&#8217;s a clear home for questions on creating add-ons, how to use a particular library, or even about using PHP in a template.&nbsp; Instead of user conversations about add-on Y&#8217;s tag parameter X, this forum will clearly help developers learn how to extend ExpressionEngine along side their peers: other coding professionals.</p>
+
+<p>Visibility of your add-ons will not be a concern.&nbsp; Three years ago, users got their information on what add-ons were available from our site.&nbsp; That&#8217;s no longer the case, with the wonderful resource at <a href="http://devot-ee.com/">Devot:ee</a>.&nbsp; Ryan Masuga sums up why he created this site on Devot:ee&#8217;s <a href="http://devot-ee.com/about">about page</a>:</p>
+
+<blockquote><p>We wouldn’t necessarily go to Apple’s site for all the tips, tricks and help for our Apple products – why would we do that for EllisLab products? EllisLab’s forums are great (the best, most useful forums we’ve ever been a part of) – but we had some great ideas to take EE-related information even further – and so devot:ee was created.</p></blockquote>
+
+<p>And that&#8217;s precisely what he did.&nbsp; Devot:ee not only put the third party add-on information stream squarely back into the hands of third parties, he did it in a way that greatly surpasses anything we tried here at ExpressionEngine.com.</p>
+
+<p>The options for hosting and supporting your add-ons are near limitless.&nbsp; Commercial add-on developers will quickly find that they are much more successful when they have a dedicated site and their own support center.&nbsp; For authors who just want to freely share their work, using a site like <a href="http://bitbucket.org/">BitBucket</a> will give you hosting, versioning, past downloads, issue tracking, a wiki, and so on.&nbsp; <a href="http://getsatisfaction/">Get Satisfaction</a> is another option for customer service and support with options ranging from free and simple to robust solutions suitable for enterprise level support.&nbsp; In all cases, the experience for both you and your users is far superior compared to using a forum thread.</p>
+
+<p>For community members, if you haven&#8217;t already, you&#8217;ll want to start using Devot:ee to keep up with the third party add-on scene.&nbsp; We will continue to foster that relationship to increase and improve how their information ties into our site.&nbsp; Third party developers with any questions are invited to post to the discussion thread linked above for this entry or derek.jones@ellislab.com for questions of a private nature.&nbsp; Also, keep an eye out on the <a href="http://expressionengine.com/blog/">ExpressionEngine blog</a> both for information on our press release submission program as well as an upcoming post with some tips on using Mercurial to manage your add-on development.
+</p>";s:4:"guid";s:101:"http://expressionengine.com/blog/entry/third_party_add-on_policies_for_the_new_forums/#When:20:50:36Z";s:7:"pubdate";s:29:"Mon, 19 Jul 2010 20:50:36 GMT";s:7:"summary";s:4765:"<p>Today we are introducing two new changes to our Community Forums to help people find new add-ons and to ensure that people have a better support experience with third party add-ons. </p>
+
+<p>First, we are changing the &#8220;Site Introduction&#8221; forum to the <a href="http://expressionengine.com/forums/viewforum/97/">Community News</a> forum.&nbsp; In this forum you can announce your new ExpressionEngine powered site, add-on, or other related product or service.&nbsp; Additionally we have a program in development that will enable developers to reach the Community through the ExpressionEngine Blog. We will provide details at a later date once we take this service live.</p>
+
+<p>Second, starting today we are no longer allowing third party developers to host or provide technical support for third party add-ons directly on the ExpressionEngine Forums. We encourage you to tell people about your add-on on the Community News Forum, and answer questions people may have about its purpose, but you must provide your own hosting and support for your add-on. We are confident that this is a win for you and the community.</p>
+
+<p>With our site refresh we looked closely at all forum activity, and for the developer forums, we saw a need to go back to the drawing board.&nbsp; From the beginning, the goal of the development forums was to allow developers to ask questions that would then be answered either by EllisLab developers or fellow third party developers.&nbsp; Because we split the forums up by add-on type and due to a lack of good alternatives, these desirable programming conversations got buried in add-on announcements and user support.</p>
+
+<p>Simplification was in order to provide a space that could focus on the technically minded discussions of <a href="http://expressionengine.com/forums/viewforum/116/">Development and Programming</a>, as they pertain to ExpressionEngine.&nbsp; Now there&#8217;s a clear home for questions on creating add-ons, how to use a particular library, or even about using PHP in a template.&nbsp; Instead of user conversations about add-on Y&#8217;s tag parameter X, this forum will clearly help developers learn how to extend ExpressionEngine along side their peers: other coding professionals.</p>
+
+<p>Visibility of your add-ons will not be a concern.&nbsp; Three years ago, users got their information on what add-ons were available from our site.&nbsp; That&#8217;s no longer the case, with the wonderful resource at <a href="http://devot-ee.com/">Devot:ee</a>.&nbsp; Ryan Masuga sums up why he created this site on Devot:ee&#8217;s <a href="http://devot-ee.com/about">about page</a>:</p>
+
+<blockquote><p>We wouldn’t necessarily go to Apple’s site for all the tips, tricks and help for our Apple products – why would we do that for EllisLab products? EllisLab’s forums are great (the best, most useful forums we’ve ever been a part of) – but we had some great ideas to take EE-related information even further – and so devot:ee was created.</p></blockquote>
+
+<p>And that&#8217;s precisely what he did.&nbsp; Devot:ee not only put the third party add-on information stream squarely back into the hands of third parties, he did it in a way that greatly surpasses anything we tried here at ExpressionEngine.com.</p>
+
+<p>The options for hosting and supporting your add-ons are near limitless.&nbsp; Commercial add-on developers will quickly find that they are much more successful when they have a dedicated site and their own support center.&nbsp; For authors who just want to freely share their work, using a site like <a href="http://bitbucket.org/">BitBucket</a> will give you hosting, versioning, past downloads, issue tracking, a wiki, and so on.&nbsp; <a href="http://getsatisfaction/">Get Satisfaction</a> is another option for customer service and support with options ranging from free and simple to robust solutions suitable for enterprise level support.&nbsp; In all cases, the experience for both you and your users is far superior compared to using a forum thread.</p>
+
+<p>For community members, if you haven&#8217;t already, you&#8217;ll want to start using Devot:ee to keep up with the third party add-on scene.&nbsp; We will continue to foster that relationship to increase and improve how their information ties into our site.&nbsp; Third party developers with any questions are invited to post to the discussion thread linked above for this entry or derek.jones@ellislab.com for questions of a private nature.&nbsp; Also, keep an eye out on the <a href="http://expressionengine.com/blog/">ExpressionEngine blog</a> both for information on our press release submission program as well as an upcoming post with some tips on using Mercurial to manage your add-on development.
+</p>";}}s:7:"channel";a:9:{s:5:"title";s:7:"EE Blog";s:4:"link";s:33:"http://expressionengine.com/blog/";s:11:"description";s:21:"ExpressionEngine Blog";s:9:"copyright";s:31:"Copyright 2010 ExpressionEngine";s:4:"docs";s:41:"http://www.rssboard.org/rss-specification";s:9:"generator";s:45:"ExpressionEngine http://expressionengine.com/";s:8:"language";s:2:"en";s:13:"lastbuilddate";s:29:"Thu, 11 Nov 2010 20:55:26 GMT";s:7:"tagline";s:21:"ExpressionEngine Blog";}s:9:"textinput";a:0:{}s:5:"image";a:0:{}s:9:"feed_type";s:3:"RSS";s:12:"feed_version";s:3:"2.0";s:8:"encoding";s:5:"utf-8";s:5:"stack";a:0:{}s:9:"inchannel";b:0;s:6:"initem";b:0;s:9:"incontent";b:0;s:11:"intextinput";b:0;s:7:"inimage";b:0;s:13:"current_field";s:0:"";s:17:"current_namespace";b:0;s:4:"etag";b:0;s:5:"ERROR";s:0:"";s:19:"_CONTENT_CONSTRUCTS";a:6:{i:0;s:7:"content";i:1;s:7:"summary";i:2;s:4:"info";i:3;s:5:"title";i:4;s:7:"tagline";i:5;s:9:"copyright";}s:16:"_KNOWN_ENCODINGS";a:3:{i:0;s:5:"UTF-8";i:1;s:8:"US-ASCII";i:2;s:10:"ISO-8859-1";}s:13:"last_modified";s:31:"Thu, 11 Nov 2010 20:55:26 GMT
+";}
