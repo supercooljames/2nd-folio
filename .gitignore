@@ -1,0 +1,9 @@
+.DS_Store
+.htaccess
+!/.htaccess
+current_version
+*/expressionengine/cache/*
+/dashboard/expressionengine/config/config.php
+/dashboard/expressionengine/config/database.php
+/uploads
+/images/sized
