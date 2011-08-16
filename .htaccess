@@ -10,5 +10,3 @@ RewriteCond %{QUERY_STRING} ^(ACT=.*)$ [NC,OR]
 RewriteCond %{QUERY_STRING} ^(URL=.*)$ [NC,OR]
 RewriteCond %{QUERY_STRING} ^(CSS=.*)$ [NC]   
 RewriteRule ^(.*)$ /index.php\?&%{QUERY_STRING} [L] 
-
-
