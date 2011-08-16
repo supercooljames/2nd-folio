@@ -15,7 +15,7 @@
 $config['app_version'] 				= "222";
 $config['install_lock'] 			= "1";
 $config['license_number'] 			= "";
-$config['debug'] 					= "1";
+$config['debug'] 					= "0";
 $config['site_label'] 				= "DanceXchange";
 $config['is_system_on'] 			= "y";
 $config['word_separator'] 			= "dash";
