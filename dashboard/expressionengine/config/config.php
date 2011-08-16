@@ -20,6 +20,7 @@ $config['site_label'] 				= "DanceXchange";
 $config['is_system_on'] 			= "y";
 $config['word_separator'] 			= "dash";
 $config['cp_theme']					= "default";
+$config['use_category_name'] 		= "y";
 
 $config['doc_url'] 					= "http://expressionengine.com/user_guide/";
 $config['cookie_prefix'] 			= "ee2_";
@@ -28,8 +29,6 @@ $config['enable_db_caching']		= "y";
 $config['cp_url'] 					= 'http://www.2ndfolio.net/dashboard/index.php';
 $config['multiple_sites_enabled'] 	= 'n';
 
-//[uri_protocol] => AUTO
-$config['use_category_name'] 		= "y";
 
 
 // Dynamic Paths
