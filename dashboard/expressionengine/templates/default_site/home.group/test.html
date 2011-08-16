@@ -1,0 +1,48 @@
+<!DOCTYPE HTML">
+<html>
+	<head>
+		<title>Download Playing Cards | 2nd Folio</title>
+		
+		{embed="includes/head"}
+		
+	</head>
+	<body>
+		{embed="includes/header"}
+		<div class="container">
+			<div class="page-top"></div>
+			<div class="page-mid">
+				{if logged_in}
+				<div class="span-24">
+					<div class="span-18">
+					Hi {username}, you are logged in!
+					<a href="{path='logout'}">Log Out</a>
+						<div>
+							{embed="includes/member-details"}
+						</div>
+					</div>
+				</div>
+				{if:else}
+					<div class="span-24">
+						<div class="span-15">
+							logged out
+						</div>
+						<div class="span-8 push-1 last prepend-top">
+								{exp:member:login_form return="home/test"}
+									<label class="stencil">Username</label><br />
+									<input type="text" name="username" value="" class="span-5 text"/> <br />
+									<label class="stencil">Password</label><br />
+									<input type="password" name="password" value="" class="span-5 text" /></p>
+									<p>
+										<input type="submit" name="submit" value="Login" />
+									</p>
+								{/exp:member:login_form}
+						</div>
+					</div>
+				{/if}
+				<div class="clear"></div>
+			</div>
+			<div class="page-bottom"></div>
+		</div>
+		{embed="includes/footer"}
+	</body>
+</html>
