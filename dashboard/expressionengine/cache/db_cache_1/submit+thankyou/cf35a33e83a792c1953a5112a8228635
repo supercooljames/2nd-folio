@@ -1,0 +1,143 @@
+O:12:"CI_DB_result":7:{s:7:"conn_id";N;s:9:"result_id";N;s:12:"result_array";a:1:{i:0;a:14:{s:13:"template_name";s:5:"index";s:11:"template_id";s:2:"21";s:13:"template_data";s:1852:"<!DOCTYPE HTML">
+<html>
+	<head>
+		<title>Submit | 2nd Folio</title>
+		
+		{embed="includes/head"}
+		
+	</head>
+	<body>
+		{embed="includes/header"}
+		<div class="container">
+			<div class="page-top"></div>
+			<div class="page-mid">			
+			<div class="span-24">
+			
+			{if segment_2 == "thankyou"}
+				<div class="span-18">
+					<h1 class="stencil">Thank you for your suggestion</h1> 
+					<p>You will recieve an email shortly confirming your submission.</p>				
+				</div>
+			{if:else}
+				<div class="span-12">
+				{exp:channel:entries entry_id="8"}
+					<h1 class="stencil">{title}</h1>
+					<p class="intro">{intro}</p>
+					{body}
+				{/exp:channel:entries}
+				</div>
+				
+
+				{exp:freeform:form
+				   collection="Submit Form"
+				   required="name|email|message"
+				   return="submit/thankyou"
+				   notify="james@supercooldesign.co.uk, paul.sutton@candt.org"
+				   template="submission-notification"
+				   send_user_email="yes"
+				   user_email_template="submission-success"
+				   file_upload="Main Upload Directory"
+				   }
+					<div class="span-9 last push-2 prepend-top">
+					<form class="span-9 last suggestion-form">
+						<label class="stencil">Name</label><br />
+						<input type="text" name="name" class="span-9 title">
+	
+						<label class="stencil">Email</label><br />
+						<input type="text" name="email" class="span-9 title">
+	
+						<label class="stencil">Suggestion</label><br />
+						<textarea type="text" name="message" class="span-9 title"></textarea>
+						<p>
+							<button type="reset" class="nice-button">Reset</button>
+							<button type="submit" class="nice-button">Submit</button>
+						</p>
+					</form>
+					</div>
+				{/exp:freeform:form}						
+			{/if}
+			</div>
+
+				<div class="clear"></div>
+			</div>
+			
+			
+			
+			<div class="page-bottom"></div>
+
+		</div>
+		{embed="includes/footer"}
+	</body>
+</html>
+";s:13:"template_type";s:7:"webpage";s:9:"edit_date";s:10:"1313418443";s:18:"save_template_file";s:1:"y";s:5:"cache";s:1:"n";s:7:"refresh";s:1:"0";s:14:"no_auth_bounce";s:0:"";s:16:"enable_http_auth";s:1:"n";s:9:"allow_php";s:1:"n";s:18:"php_parse_location";s:1:"o";s:4:"hits";s:3:"654";s:10:"group_name";s:6:"submit";}}s:13:"result_object";a:1:{i:0;O:8:"stdClass":14:{s:13:"template_name";s:5:"index";s:11:"template_id";s:2:"21";s:13:"template_data";s:1852:"<!DOCTYPE HTML">
+<html>
+	<head>
+		<title>Submit | 2nd Folio</title>
+		
+		{embed="includes/head"}
+		
+	</head>
+	<body>
+		{embed="includes/header"}
+		<div class="container">
+			<div class="page-top"></div>
+			<div class="page-mid">			
+			<div class="span-24">
+			
+			{if segment_2 == "thankyou"}
+				<div class="span-18">
+					<h1 class="stencil">Thank you for your suggestion</h1> 
+					<p>You will recieve an email shortly confirming your submission.</p>				
+				</div>
+			{if:else}
+				<div class="span-12">
+				{exp:channel:entries entry_id="8"}
+					<h1 class="stencil">{title}</h1>
+					<p class="intro">{intro}</p>
+					{body}
+				{/exp:channel:entries}
+				</div>
+				
+
+				{exp:freeform:form
+				   collection="Submit Form"
+				   required="name|email|message"
+				   return="submit/thankyou"
+				   notify="james@supercooldesign.co.uk, paul.sutton@candt.org"
+				   template="submission-notification"
+				   send_user_email="yes"
+				   user_email_template="submission-success"
+				   file_upload="Main Upload Directory"
+				   }
+					<div class="span-9 last push-2 prepend-top">
+					<form class="span-9 last suggestion-form">
+						<label class="stencil">Name</label><br />
+						<input type="text" name="name" class="span-9 title">
+	
+						<label class="stencil">Email</label><br />
+						<input type="text" name="email" class="span-9 title">
+	
+						<label class="stencil">Suggestion</label><br />
+						<textarea type="text" name="message" class="span-9 title"></textarea>
+						<p>
+							<button type="reset" class="nice-button">Reset</button>
+							<button type="submit" class="nice-button">Submit</button>
+						</p>
+					</form>
+					</div>
+				{/exp:freeform:form}						
+			{/if}
+			</div>
+
+				<div class="clear"></div>
+			</div>
+			
+			
+			
+			<div class="page-bottom"></div>
+
+		</div>
+		{embed="includes/footer"}
+	</body>
+</html>
+";s:13:"template_type";s:7:"webpage";s:9:"edit_date";s:10:"1313418443";s:18:"save_template_file";s:1:"y";s:5:"cache";s:1:"n";s:7:"refresh";s:1:"0";s:14:"no_auth_bounce";s:0:"";s:16:"enable_http_auth";s:1:"n";s:9:"allow_php";s:1:"n";s:18:"php_parse_location";s:1:"o";s:4:"hits";s:3:"654";s:10:"group_name";s:6:"submit";}}s:11:"current_row";i:0;s:8:"num_rows";i:1;s:8:"row_data";N;}
