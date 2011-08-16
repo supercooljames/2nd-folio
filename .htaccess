@@ -5,6 +5,8 @@ RewriteCond $1 ^(member|home|about|rules|submit|search|characters|tasks|quotes|l
 RewriteRule ^(.*)$ /index.php/$1 [L] 
 
 
+ErrorDocument 404 /index.php?/home/404
+
 # Fix queries for actions, urls and css in EE
 RewriteCond %{QUERY_STRING} ^(ACT=.*)$ [NC,OR]
 RewriteCond %{QUERY_STRING} ^(URL=.*)$ [NC,OR]
