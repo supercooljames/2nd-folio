@@ -7,3 +7,4 @@ current_version
 /dashboard/expressionengine/config/database.php
 /uploads
 /images/sized
+/images/captchas
