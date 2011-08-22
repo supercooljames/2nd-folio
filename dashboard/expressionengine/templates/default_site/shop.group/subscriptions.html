@@ -1,7 +1,7 @@
 <!DOCTYPE HTML">
 <html>
 	<head>
-		<title>Shop | 2nd Folio</title>
+		<title>Subscriptions | 2nd Folio</title>
 		
 		{embed="includes/head"}
 		
@@ -13,8 +13,14 @@
 			<div class="page-mid">
 				<div class="span-24">
 					<div class="span-18">
+						{if logged_in}
 						<h1 class="stencil">Buy a 2nd Folio bout</h1>
+						<p class="intro">Click <a href="#">here</a> to buy a bout</p>
+						{/if}
+						{if logged_out}
+						<h1 class="stencil">You are not logged in.</h1>
 						<p class="intro">If you already have an account please log in <a href="{path="member/login"}">here</a>, otherwise please register <a href="{path="member/register"}">here</a>.</p>
+						{/if}
 					</div>
 				</div>
 				<div class="clear"></div>
