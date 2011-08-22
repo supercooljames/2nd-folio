@@ -1,0 +1,6 @@
+{if '{exp:member_categories:categories limit="1" member_id="{embed:mid}"}{category_id}{/exp:member_categories:categories}' == '{exp:member_categories:categories limit="1"}{category_id}{/exp:member_categories:categories}'}
+{exp:comment:entries limit="1" comment_id="{embed:cid}"}
+{comment}<br />
+<p><i>By {name} on {comment_date format="%Y %m %d"}</i></p>
+{/exp:comment:entries}
+{/if}

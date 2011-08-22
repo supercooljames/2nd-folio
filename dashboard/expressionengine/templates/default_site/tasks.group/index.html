@@ -44,19 +44,18 @@
 					</div>
 					{/task-media}
 
-
+					{/exp:channel:entries}
 
 					{if logged_in}
-					{exp:comment:entries sort="asc" limit="20"}
-					{comment}
-					<p>By {name} on {comment_date format="%Y %m %d"}</p>
+					{exp:comment:entries sort="asc"}
+						{embed="includes/comment-author-wrangler" mid="{author_id}" cid="{comment_id}"}<br />
 					{/exp:comment:entries}
 					{/if}
 
 
 					{if logged_out}
 					<h1>Log in to comment</h1>
-					{exp:member:login_form return="tasks/{url_title}"}
+					{exp:member:login_form return="tasks/{segment_2}"}
 						<label class="stencil">Username</label><br />
 						<input type="text" name="username" value="" class="span-5 text"/> <br />
 						<label class="stencil">Password</label><br />
@@ -88,7 +87,7 @@
 					{/if}
 
 				</div>
-				{/exp:channel:entries}
+			
 
 
 
