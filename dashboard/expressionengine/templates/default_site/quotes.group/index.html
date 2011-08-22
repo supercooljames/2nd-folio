@@ -23,7 +23,6 @@
 						{quote-body}
 					</div>
 					<div class="span-15 last prepend-top">
-					
 						{quote-media}
 						<div class="span-15 last append-bottom border-bottom">
 							<h2>{heading}</h2>
@@ -34,18 +33,17 @@
 								{if vimeo != ""}
 								<iframe src="http://player.vimeo.com/video/{exp:low_replace find="http://vimeo.com/" replace=""}{vimeo}{/exp:low_replace}?portrait=0&amp;color=ffffff" width="590" height="490" frameborder="0"></iframe>
 								{/if}
-
 							</div>
 							{if description != ""}{description}{/if}
 						</div>
 						{/quote-media}
-					
+						{/exp:channel:entries}
+						{embed="includes/comments"}
 					</div>
-					{/exp:channel:entries}
 				</div>
-					<div class="clear"></div>
-				</div>
-				<div class="page-bottom"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="page-bottom"></div>
 		</div>
 		{embed="includes/footer"}
 	</body>

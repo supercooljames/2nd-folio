@@ -1,7 +1,7 @@
 php_value memory_limit 120M
 
 RewriteEngine On
-RewriteCond $1 ^(member|home|about|rules|submit|search|characters|tasks|quotes|league|includes|qr|cards|P[0-9]{2,8}) [NC]
+RewriteCond $1 ^(member|home|shop|about|rules|submit|search|characters|tasks|quotes|league|includes|qr|cards|P[0-9]{2,8}) [NC]
 RewriteRule ^(.*)$ /index.php/$1 [L] 
 
 

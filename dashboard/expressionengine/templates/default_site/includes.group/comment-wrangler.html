@@ -1,0 +1,6 @@
+{exp:channel:entries limit="1" dynamic="no" entry_id="{embed:eid}"}
+	{if '{exp:member_categories:categories limit="1" member_id="{embed:aid}"}{category_id}{/exp:member_categories:categories}' == '{exp:member_categories:categories limit="1"}{category_id}{/exp:member_categories:categories}'}
+		vid_url: {video_url}
+		body: {comment_body}
+	{/if}
+{/exp:channel:entries}
