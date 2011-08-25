@@ -15,14 +15,13 @@
 					<div class="span-18">
 						{if logged_in}
 						<h1 class="stencil">Thankyou for purchasing a 2nd Folio Bout.</h1>						<p class="intro">Your transaction has been completed, and a receipt for your purchase has been emailed to you. You may log into your account at <a href="www.paypal.com">www.paypal.com</a> to view details of this transaction.</p>
-						<p>typical string to expect: ?tx=6D799135RF871022Y&st=Completed&amt=300.00&cc=GBP&cm=&item_number=</p>
+						<!-- <p>typical string to expect: ?tx=6D799135RF871022Y&st=Completed&amt=300.00&cc=GBP&cm=&item_number=</p> -->
 						
 						
-						post: {post:amt}
-						get: {get:amt}
-						both: {get_post:amt}
 						
-						{!-- {embed="includes/paypal_mailer"}--}
+						
+						
+						{embed="includes/paypal_mailer"}
 						{/if}
 					</div>
 				</div>
