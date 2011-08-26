@@ -11,7 +11,9 @@
 						<li><a href="{path="characters/"}" title="">Points</a></li>
 						<li><a href="{path="rules/"}" title="">Rules</a></li>
 						<li><a href="{path="submit/"}" title="">Submit</a></li>
-
+						<li><a href="{path="shop"}" title="">Shop</a></li>
+						{if logged_in}<li><a href="{path="my-account"}" title="">My Account</a></li>{/if}
+						{if logged_out}<li><a href="{path="member/login"}" title="">Login</a></li>{/if}
 					</ul>
 				</div>
 			</div>
