@@ -1,0 +1,34 @@
+
+<form method="post" action="{path:update_profile}">
+
+<table border='0' cellspacing='0' cellpadding='0' style='width:100%'>
+<tr>
+<td class='profileHeadingBG'colspan='2'><div class="tableHeading">{lang:edit_your_profile}</div></td>
+
+</tr><tr>
+
+<td class='tableCellTwo'><div class='defaultBold'>{lang:location}</div></td>
+<td class='tableCellOne'><input type='text' class='input' name='location' value='{location}' maxlength='50' style='width:100%'/></td>
+
+</tr><tr>
+
+<td class='tableCellTwo' valign='top'><div class='defaultBold'>{lang:bio}</div></td>
+<td class='tableCellOne'><textarea name='bio' style='width:100%' class='textarea' rows='12' cols='90'>{bio}</textarea></td>
+
+
+{custom_profile_fields}
+
+
+<tr>
+<td class='tableCellTwo' colspan="2">
+<div class='marginpad'>
+<input type='submit' class='submit' value='{lang:update}' />
+<br /><br />
+<span class="alert">*</span> {lang:required}
+</div>
+
+</td>
+</tr>
+</table>
+
+</form>
