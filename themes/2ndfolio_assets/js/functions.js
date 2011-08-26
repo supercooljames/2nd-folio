@@ -1,6 +1,9 @@
 $(document).ready(function() {
+	$('.add-team-trigger').click(function(e){
+		e.preventDefault();
+		$('#add-team').show();
+	});
 	
-
 		$('body').supersleight();
 
 
@@ -73,6 +76,5 @@ LOAD FONTS BEFORE PAGE OR WAIT 3 SECONDS
 
 
 
-	
 
 });

@@ -49,19 +49,39 @@ _______________________________________*/
 /* HEADER
 _______________________________________*/
 
-			h1#logo{background: url('../images/logo.png') no-repeat; display: block; width: 286px; height: 196px; margin: 0px; text-indent:-1000px; z-index:3; padding: 0px;}
+			h1#logo{background: url('../images/logo.png') 0 bottom no-repeat; display: block; width: 286px; height: 208px; margin: 0px; text-indent:-1000px; z-index:3; padding: 0px;}
 				h1#logo a{display: block; width: 100%; height: 100%}
 
-			.top-black{width:100%; display: block; height: 120px; background: url(../images/top-grad.png) top center repeat-x; margin-bottom: -120px;}
+			.top-black{width:100%; display: block; height: 140px; background: url(../images/top-grad.png) bottom center repeat-x; margin-bottom: -140px;}
 
 
-			#main-menu{float: right; display:block; width: 600px; height:70px;}
+			#main-menu{float: right; display:block; width: 450px; height:70px;clear:right;}
 			#main-menu li{display:inline; float: left;}
-			#main-menu li a{display:block; float:left; color:#CC0027; padding:30px 0px 0px 40px; font-size: 1.4em;}
+			#main-menu li a{display:block; float:left; color:#CC0027; padding:16px 0px 0px 40px; font-size: 1.4em;}
 			#main-menu li a:hover{ color:#fff;}
 
 			#main-menu li a.active{background: url(../images/mm-active-bg.jpg) center bottom no-repeat;}
 			#main-menu li a.last{padding-right: 0px;}
+
+
+			#top-nav {
+				float:right;
+				margin:0;
+				padding:6px 0;
+				background:#CC0027;
+				-webkit-border-radius:0 0 6px 6px;
+				-moz-border-radius:0 0 6px 6px;
+				border-radius:0 0 6px 6px;
+			}
+				#top-nav li {
+					display:block;
+					float:left;
+					margin:0;
+					padding:0 6px;
+				}
+					#top-nav li a {
+						color:#000;
+					}
 
 /* FOOTER
 _______________________________________*/
@@ -197,6 +217,56 @@ _______________________________________*/
 			.search-results h3{font-size: 1em; margin-bottom: 0px;}
 			.search-results p{margin: 0.5em 0 0 0;}
 			.search-results a{color:#fff}
+
+
+#my-account h2 {
+	color:#CC0027;
+	display:block;
+	border-bottom:1px solid #fff;
+	margin:0 0 10px 0;
+}
+	#my-account h2.bout-details {
+		margin:0;
+		border:none;
+	}
+#my-account .sub-menu li {
+	padding:0;
+	margin:5px 0;
+	border-bottom:1px solid #fff;
+}
+	#my-account .sub-menu li a {
+		color:#fff;
+	}
+#my-account .team-list {
+	margin:10px 0 0 0;
+	display:inline-block;
+	width:100%;
+}
+	#my-account .team-list li:first-child {
+		border-top:1px solid #fff;
+	}
+	#my-account .team-list li {
+		padding:4px 10px;
+		border-left:1px solid #fff;
+		border-right:1px solid #fff;
+		border-bottom:1px solid #fff;
+	}
+#my-account .box {
+	background:none;
+	padding:10px;
+	border:1px solid #fff;
+}
+#my-account .button {
+	float:right;
+}
+
+
+
+
+
+#add-team {
+	display:none;
+}
 
 
 

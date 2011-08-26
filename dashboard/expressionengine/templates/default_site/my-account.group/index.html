@@ -1,1 +1,111 @@
-my account
+<!DOCTYPE HTML">
+<html>
+	<head>
+		<title>My Account | 2nd Folio</title>
+		
+		{embed="includes/head"}
+		
+	</head>
+	<body>
+		{embed="includes/header"}
+		<div class="container">
+			<div class="page-top"></div>
+			<div class="page-mid">
+				<div id="my-account" class="span-24">
+
+
+					{if logged_in}
+						{if segment_2 == ''}
+						<div class="span-8">
+							<h2>My Account</h2>
+							<ul class="span-5 sub-menu">
+								<li><a href="{path="shop/subscriptions"}">Subscriptions</a></li>
+								<li><a href="{path="member/edit_email"}">Change Password</a></li>
+								<li><a href="{path="member/edit_userpass"}">Change Email</a></li>
+							</ul>
+
+							{embed="includes/bout-details" mid="{member_id}"}
+						</div>
+
+						<div class="span-15 push-1 last">
+							<a class="button" href="{path="member/edit_profile"}">edit</a>
+							<h2>My Bio</h2>
+							<div>
+							{if location != ''}
+							<p>Location: <i>{location}</i></p>
+							{/if}
+							{exp:member:custom_profile_data}
+								{if bio != ''}
+								{bio}
+								{/if}
+								{if bio == ''}
+								You haven't filled out your bio yet. You can do so <a href="{path="member/edit_profile"}">here</a>.
+								{/if}
+							{/exp:member:custom_profile_data}
+							</div>
+
+							<a href="#" class="add-team-trigger button">add</a>
+							<h2>Teams</h2>
+							<div id="add-team">
+							{exp:safecracker channel="team" return="my-account" author_only="yes" datepicker="no" safecracker_head="no" include_jquery="no" json="no"}
+								<label for="title">Team Name</label><br />
+								<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();" /><br />
+
+								<label for="team_description">Description</label><br />
+								{field:team_description}<br />
+
+								<label for="team_games_played">Games Played</label><br />
+								{field:team_games_played}<br />
+
+								<label for="team_total_points">Total Points</label><br />
+								{field:team_total_points}<br />
+
+								<input type="submit" value="Submit" />
+							{/exp:safecracker}
+							</div>
+							<ul class="team-list">
+								{exp:channel:entries channel="team" username="CURRENT_USER"}
+								<li>
+									{title}
+									<a href="{title_permalink="my-account"}" class="button">edit</a>
+								</li>
+								{/exp:channel:entries}
+							</ul>
+						</div>
+						{/if}
+
+
+						{if segment_2 != ''}
+							<a href="{path="my-account"}">back</a>
+							<h2>Edit this team</h2>
+							{exp:safecracker channel="team" url_title="{segment_2}" return="my-account" author_only="yes" datepicker="no" safecracker_head="no" include_jquery="no" json="no"}
+								<label for="title">Team Name</label><br />
+								<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();" /><br />
+
+								<label for="team_description">Description</label><br />
+								{field:team_description}<br />
+
+								<label for="team_games_played">Games Played</label><br />
+								{field:team_games_played}<br />
+
+								<label for="team_total_points">Total Points</label><br />
+								{field:team_total_points}<br />
+
+								<input type="submit" value="Submit" />
+							{/exp:safecracker}
+						{/if}
+					{/if}
+
+
+					{if logged_out}
+						<h1 class="stencil">You are not logged in.</h1>
+						<p class="intro">If you already have an account please log in <a href="{path="member/login"}">here</a>, otherwise please register <a href="{path="member/register"}">here</a>.</p>
+					{/if}
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="page-bottom"></div>
+		</div>
+		{embed="includes/footer"}
+	</body>
+</html>
