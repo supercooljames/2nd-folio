@@ -28,7 +28,7 @@
 							</thead>
 							{exp:channel:entries channel="team" orderby="team_total_points" sort="desc" dynamic="no"}
 								<tr class="{switch="odd|tother"}">
-									<td class="team"><a href="{title_permalink="league"}" class="team-info-trigger">{title}</a><br/><small>{author}</small></td>
+									<td class="team"><a href="{title_permalink="league"}" rel="{title_permalink="includes/ajax-team-info"}" class="team-info-trigger">{title}</a><br/><small>{author}</small></td>
 									<td class="played">{team_games_played}</td>
 									<td class="average">{exp:simple_math calculate="round({team_total_points} / {team_games_played},0)"}</td>
 									<td class="total">{team_total_points}</td>
@@ -53,18 +53,16 @@
 		{embed="includes/footer"}
 		
 		<script type="text/javascript" charset="utf-8">
-		function loadMoreClasses(cl_pagecount)
+		function loadTeamInfo(url)
 		{
-			// $.ajax({
-			// 	url: '{path="includes/ajax-team-info/"}',
-			// 	success: function(cl_content) {
-			// 		$(cl_content).hide().appendTo('#classes-list');
-			// 		$('.classes-page-nav').remove();
-			// 		$('#cl_whirlygig').hide();
-			// 		$('#classes-list li').fadeIn(2000);
-			// 		hoverColourFadeEvent();
-			// 	}
-			// });
+			$.ajax({
+				url: url,
+				success: function(content) {
+					$('#team-info .box').remove();
+					$(content).appendTo('#team-info');
+					$('#team-info .box').show();
+				}
+			});
 		}
 
 		$(function(){
@@ -79,16 +77,9 @@
 
 				$('.team-info-trigger').click(function(e){
 					e.preventDefault();
-					alert('qwoo');
-					// if(cl_totalpagecount <= cl_pagecount){
-					// 	$('#more-classes').hide();
-					// 	$("#classes").append('<span id="no-more-classes" class="ajax-more">All results displayed</span>');
-					// 	return false;
-					// }else{
-					// 	$('#cl_whirlygig').show();
-					// 	loadMoreClasses(cl_pagecount);
-					// 	cl_pagecount = cl_pagecount + 20;
-					// }
+					var url = $(this).attr('rel');
+					//alert(url);
+					loadTeamInfo(url);
 				});
 
 		});

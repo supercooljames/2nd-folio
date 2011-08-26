@@ -188,7 +188,15 @@ _______________________________________*/
 			table.league .played	{width:25%; text-align: center;}			
 			table.league .average	{width:25%; text-align: center;}			
 			table.league .total		{width:10%; text-align: right;}		
-	
+
+			table.league .team a {color:#fff;}
+			table.league .team a:hover {color:#CC0027;}
+			table.league .team small {font-size: 0.6em;}
+			
+			#league .box {
+				background:none;
+				border:1px solid #fff;
+			}
 
 			/*CHARACTER*/
 
