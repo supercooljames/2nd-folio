@@ -21,7 +21,7 @@
 
 {if logged_in}
 <a href="{path='logout'}">Logout</a>
-	{exp:safecracker channel="comments" return="{segment_1}/{segment_2}"}
+	{exp:safecracker channel="comments" return="{segment_1}/{segment_2}" datepicker="no" safecracker_head="no" include_jquery="no" json="no"}
 		<input type="hidden" name="title" id="title" value="{segment_2}-" size="50" maxlength="100" onkeyup="liveUrlTitle();" />
 
 		<input type="hidden" name="comment_parent" id="comment_parent" value="{segment_2}" size="50" maxlength="100" />
