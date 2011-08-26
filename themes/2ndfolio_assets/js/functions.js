@@ -4,17 +4,8 @@ $(document).ready(function() {
 		$('#add-team').show();
 	});
 	
-		$('body').supersleight();
+	$('body').supersleight();
 
-
-	/*-------------------------------------------    
-	FLOWPLAYER:
-	Flash video player
-	-------------------------------------------*/
-
-		flowplayer("player", "/themes/2ndfolio_assets/js/flowplayer-3.2.4.swf",{
-			buttons: false	
-		});
 	
 /*-------------------------------------------    
 LOAD FONTS BEFORE PAGE OR WAIT 3 SECONDS
