@@ -11,48 +11,87 @@
 		<div class="container">
 			<div class="page-top"></div>
 			<div class="page-mid">			
-				<div class="span-24">
-				{exp:channel:entries channel="league" limit="1"}
-					<div class="span-8 colborder prepend-top">
+				<div id="league" class="span-24">
+					{exp:channel:entries channel="league" limit="1" dynamic="no"}
+					<div class="prepend-top">
 						<h1 class="stencil">The League</h1>
 						<p class="intro">{league-body}</p>
 					</div>
-					<div class="span-15 last prepend-top">
-
-					<table class="league">
-						<thead>
-							<td class="team">Team
-							</td>
-							<td class="played">Played<br /><small>[Number of rounds]</small>
-							</td>
-							<td played="average">Average<br /><small>[Points scored]</small>
-							</td>
-							<td class="total">Total
-							</td>
-						</thead>
-						{league orderby="points" sort="desc"}
-							<tr class="{switch="odd|tother"}">
-								<td class="team">{team}</td>
-								<td class="played">{rounds}</td>
-								<td class="average">
-								{exp:simple_math calculate="round({points} / {rounds},0)"}
-								 </td>
-								<td class="total">{points}</td>
-							</tr>
-						{/league}
-
-					</table>
-				
-
-
-
-					</div>
 					{/exp:channel:entries}
+					<div class="span-15 prepend-top">
+						<table class="league">
+							<thead>
+								<td class="team">Team</td>
+								<td class="played">Played<br /><small>[Number of rounds]</small></td>
+								<td played="average">Average<br /><small>[Points scored]</small></td>
+								<td class="total">Total</td>
+							</thead>
+							{exp:channel:entries channel="team" orderby="team_total_points" sort="desc" dynamic="no"}
+								<tr class="{switch="odd|tother"}">
+									<td class="team"><a href="{title_permalink="league"}" class="team-info-trigger">{title}</a><br/><small>{author}</small></td>
+									<td class="played">{team_games_played}</td>
+									<td class="average">{exp:simple_math calculate="round({team_total_points} / {team_games_played},0)"}</td>
+									<td class="total">{team_total_points}</td>
+								</tr>
+							{/exp:channel:entries}
+						</table>
+					</div>
+					
+					<div class="span-8 push-1 last">
+						<div id="team-info">
+						{if segment_2 != ''}
+						{embed="includes/ajax-team-info"}
+						{/if}
+						</div>
+					</div>
+					
 				</div>
 					<div class="clear"></div>
 				</div>
 				<div class="page-bottom"></div>
 		</div>
 		{embed="includes/footer"}
+		
+		<script type="text/javascript" charset="utf-8">
+		function loadMoreClasses(cl_pagecount)
+		{
+			// $.ajax({
+			// 	url: '{path="includes/ajax-team-info/"}',
+			// 	success: function(cl_content) {
+			// 		$(cl_content).hide().appendTo('#classes-list');
+			// 		$('.classes-page-nav').remove();
+			// 		$('#cl_whirlygig').hide();
+			// 		$('#classes-list li').fadeIn(2000);
+			// 		hoverColourFadeEvent();
+			// 	}
+			// });
+		}
+
+		$(function(){
+
+
+				// $("#classes").append('<span id="cl_whirlygig" class="whirlygig"></span><a href="#" id="more-classes" class="ajax-more">Show more</a>');
+
+
+				// var cl_totalpages = $('.classes-page-nav').attr('rel');
+				// var cl_totalpagecount = cl_totalpages * 20 + 1;
+				// var cl_pagecount = 21;
+
+				$('.team-info-trigger').click(function(e){
+					e.preventDefault();
+					alert('qwoo');
+					// if(cl_totalpagecount <= cl_pagecount){
+					// 	$('#more-classes').hide();
+					// 	$("#classes").append('<span id="no-more-classes" class="ajax-more">All results displayed</span>');
+					// 	return false;
+					// }else{
+					// 	$('#cl_whirlygig').show();
+					// 	loadMoreClasses(cl_pagecount);
+					// 	cl_pagecount = cl_pagecount + 20;
+					// }
+				});
+
+		});
+		</script>
 	</body>
 </html>
