@@ -63,14 +63,26 @@
 								<input type="submit" value="Submit" />
 							{/exp:safecracker}
 							</div>
-							<ul class="team-list">
-								{exp:channel:entries channel="team" username="CURRENT_USER"}
-								<li>
-									{title}
-									<a href="{title_permalink="my-account"}" class="button">edit</a>
-								</li>
-								{/exp:channel:entries}
-							</ul>
+							<table class="league">
+								<thead>
+									<td class="team">Team</td>
+									<td class="played">Played<br /><small>[Number of rounds]</small></td>
+									<td played="average">Average<br /><small>[Points scored]</small></td>
+									<td class="total">Total</td>
+									<td>Edit</td>
+								</thead>
+								<tbody>
+									{exp:channel:entries channel="team" username="CURRENT_USER" orderby="team_total_points" sort="desc"}
+									<tr class="{switch="odd|tother"}">
+										<td>{title}</td>
+										<td>{team_games_played}</td>
+										<td>{exp:simple_math calculate="round({team_total_points} / {team_games_played},0)"}</td>
+										<td>{team_total_points}</td>
+										<td><a href="{title_permalink="my-account"}" class="button">edit</a></td>
+									</tr>
+									{/exp:channel:entries}
+								</tbody>
+							</table>
 						</div>
 						{/if}
 

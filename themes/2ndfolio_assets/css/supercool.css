@@ -245,20 +245,6 @@ _______________________________________*/
 	#my-account .sub-menu li a {
 		color:#fff;
 	}
-#my-account .team-list {
-	margin:10px 0 0 0;
-	display:inline-block;
-	width:100%;
-}
-	#my-account .team-list li:first-child {
-		border-top:1px solid #fff;
-	}
-	#my-account .team-list li {
-		padding:4px 10px;
-		border-left:1px solid #fff;
-		border-right:1px solid #fff;
-		border-bottom:1px solid #fff;
-	}
 #my-account .box {
 	background:none;
 	padding:10px;
@@ -268,13 +254,6 @@ _______________________________________*/
 	float:right;
 }
 
-
-
-
-
 #add-team {
 	display:none;
 }
-
-
-
