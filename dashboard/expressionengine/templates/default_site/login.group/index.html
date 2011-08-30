@@ -1,0 +1,38 @@
+<!DOCTYPE HTML">
+<html>
+	<head>
+		<title>Login | 2nd Folio</title>
+		
+		{embed="includes/head"}
+		
+	</head>
+	<body>
+		{embed="includes/header"}
+		<div class="container">
+			<div class="page-top"></div>
+			<div class="page-mid">
+				<div class="span-24">
+					<div class="span-18">
+						{if logged_out}
+						{exp:member:login_form return="my-account"}
+							<label class="stencil">Username</label><br />
+							<input type="text" name="username" value="" class="span-5 text"/> <br />
+							<label class="stencil">Password</label><br />
+							<input type="password" name="password" value="" class="span-5 text" /></p>
+							<p>
+								<input type="submit" name="submit" value="Login" />
+							</p>
+						{/exp:member:login_form}
+						{/if}
+						{if logged_in}
+						{redirect="my-account"}
+						{/if}
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="page-bottom"></div>
+		</div>
+		{embed="includes/footer"}
+	</body>
+</html>
