@@ -5,8 +5,8 @@ $active_record = TRUE;
 
 $db['expressionengine']['hostname'] = "localhost";
 $db['expressionengine']['username'] = "root";
-$db['expressionengine']['password'] = "mekormbk";
-$db['expressionengine']['database'] = "second-folio";
+$db['expressionengine']['password'] = "root";
+$db['expressionengine']['database'] = "secondfolio";
 $db['expressionengine']['dbdriver'] = "mysql";
 $db['expressionengine']['dbprefix'] = "exp_";
 $db['expressionengine']['pconnect'] = FALSE;
@@ -16,7 +16,7 @@ $db['expressionengine']['cache_on'] = FALSE;
 $db['expressionengine']['autoinit'] = FALSE;
 $db['expressionengine']['char_set'] = "utf8";
 $db['expressionengine']['dbcollat'] = "utf8_general_ci";
-$db['expressionengine']['cachedir'] = "/Users/imac1/Sites/2ndfolio/dashboard/expressionengine/cache/db_cache/";
+$db['expressionengine']['cachedir'] = "/Users/james/Sites/2ndfolio/dashboard/expressionengine/cache/db_cache/";
 
 /* End of file database.php */
 /* Location: ./system/expressionengine/config/database.php */

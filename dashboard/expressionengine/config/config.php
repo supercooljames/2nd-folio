@@ -6,29 +6,25 @@
 |--------------------------------------------------------------------------
 |
 | The following items are for use with ExpressionEngine.  The rest of
-| the config items are for use with CodeIgniter.
+| the config items are for use with CodeIgniter, some of which are not
+| observed by ExpressionEngine, e.g. 'permitted_uri_chars'
 |
 */
 
-
 // Basic site stuff
 $config['app_version'] 				= "222";
-$config['install_lock'] 			= "1";
+$config['install_lock'] 			= "";
 $config['license_number'] 			= "";
 $config['debug'] 					= "1";
-$config['site_label'] 				= "DanceXchange";
+$config['site_label'] 				= "2nd Folio";
 $config['is_system_on'] 			= "y";
 $config['word_separator'] 			= "dash";
 $config['cp_theme']					= "default";
+$config['site_404']					= "home/404";
+$config['strict_urls']				= "y";
+
+//[uri_protocol] => AUTO
 $config['use_category_name'] 		= "y";
-
-$config['doc_url'] 					= "http://expressionengine.com/user_guide/";
-$config['cookie_prefix'] 			= "ee2_";
-$config['allow_extensions'] 		= "y";
-$config['enable_db_caching']		= "y";
-$config['cp_url'] 					= 'http://www.2ndfolio.net/dashboard/index.php';
-$config['multiple_sites_enabled'] 	= 'n';
-
 
 
 // Dynamic Paths
@@ -68,12 +64,18 @@ $config['sig_img_path']         	= $images_path . "/signature_attachments/";
 $config['sig_img_url']          	= $images_url . "/signature_attachments/";
 $config['prv_msg_upload_path']  	= $images_path . "/pm_attachments/";
 
+// minimee cache stuff - if using
+$config['minimee_cache_path'] = $base_path . "themes/site_assets/cache/";
+$config['minimee_cache_url'] = $base_url . "themes/site_assets/cache/";
 
+// Rest of standard config
+$config['doc_url'] 					= "http://expressionengine.com/user_guide/";
+$config['cookie_prefix'] 			= "ee2_";
 
+$config['allow_extensions'] 		= "y";
+$config['enable_db_caching']		= "y";
 
 // END EE config items
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -86,7 +88,7 @@ $config['prv_msg_upload_path']  	= $images_path . "/pm_attachments/";
 |	http://example.com/
 |
 */
-//$config['base_url']	= "http://bpn.supercooldesign.co.uk/";
+//$config['base_url']	= "";
 
 /*
 |--------------------------------------------------------------------------
@@ -98,8 +100,7 @@ $config['prv_msg_upload_path']  	= $images_path . "/pm_attachments/";
 | variable so that it is blank.
 |
 */
-//$config['index_page'] = "";
-//moved to up the top, so we don't forget it and can set dashboard url easier
+//$config['index_page'] = "index.php";
 
 /*
 |--------------------------------------------------------------------------

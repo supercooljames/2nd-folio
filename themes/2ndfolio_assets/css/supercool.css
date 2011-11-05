@@ -128,10 +128,9 @@ _______________________________________*/
 
 			/*HOMEPAGE*/
 			
-			a.home-btn-qr, a.home-btn-cards, a.home-btn-league{background: url(../images/home-button.jpg) no-repeat; height: 192px; display: block; text-indent: -10000px; float: left;}			
-				a.home-btn-qr{background-position: 0 0; width:317px; margin-left: -15px}	
-				a.home-btn-cards{background-position: -316px 0px; width:335px;}	
-				a.home-btn-league{background-position: -655px 0; width:310px;}	
+				.home-links
+
+
 			
 				a.candt-logo{display: block; width: 97px; height: 114px; background: url(../images/candt-logo.png) no-repeat; float: right; margin-top: -1.5em; text-indent: -5000px}
 				a.supercool{display: block; width: 85px; height: 26px; background: url(../images/supercool.png) no-repeat; float: left; margin-top: -10px; text-indent: -5000px;}			
