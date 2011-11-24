@@ -1,0 +1,106 @@
+2011-11-24 20:36:12 overwrite css/screen.css 
+2011-11-24 20:36:19 overwrite css/supercool.css 
+2011-11-24 20:36:32 overwrite css/supercool.css 
+2011-11-24 20:37:56 overwrite css/supercool.css 
+2011-11-24 20:38:04 identical css/screen.css 
+2011-11-24 20:39:06 overwrite css/supercool.css 
+2011-11-24 20:39:11 identical css/supercool.css 
+2011-11-24 20:39:36 overwrite css/supercool.css 
+2011-11-24 20:39:52 overwrite css/supercool.css 
+2011-11-24 20:40:19 overwrite css/supercool.css 
+2011-11-24 20:41:48 identical css/supercool.css 
+2011-11-24 20:42:03 overwrite css/supercool.css 
+2011-11-24 20:42:28     error sass/supercool.scss (Line 61: Undefined mixin 'plain-list'.)
+2011-11-24 20:42:28 overwrite css/supercool.css 
+2011-11-24 20:42:40 overwrite css/supercool.css 
+2011-11-24 20:42:51 overwrite css/supercool.css 
+2011-11-24 20:43:09 overwrite css/supercool.css 
+2011-11-24 20:43:11 identical css/supercool.css 
+2011-11-24 20:43:27     error sass/supercool.scss (Line 52: Invalid CSS after "..._____________*/": expected selector or at-rule, was "{list-style: no...")
+2011-11-24 20:43:27 overwrite css/supercool.css 
+2011-11-24 20:43:35 overwrite css/supercool.css 
+2011-11-24 20:44:20 overwrite css/supercool.css 
+2011-11-24 20:45:16 overwrite css/supercool.css 
+2011-11-24 20:46:38 overwrite css/supercool.css 
+2011-11-24 20:47:31 overwrite css/supercool.css 
+2011-11-24 20:49:02 overwrite css/supercool.css 
+2011-11-24 20:49:50 overwrite css/supercool.css 
+2011-11-24 20:50:13 overwrite css/supercool.css 
+2011-11-24 20:50:17 overwrite css/supercool.css 
+2011-11-24 20:50:38 overwrite css/supercool.css 
+2011-11-24 20:51:27 overwrite css/supercool.css 
+2011-11-24 20:53:06 overwrite css/supercool.css 
+2011-11-24 20:53:10 overwrite css/supercool.css 
+2011-11-24 20:53:18 identical css/supercool.css 
+2011-11-24 20:55:14 overwrite css/supercool.css 
+2011-11-24 20:55:29 overwrite css/supercool.css 
+2011-11-24 20:57:03     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:57:03 overwrite css/supercool.css 
+2011-11-24 20:57:08     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:57:08 identical css/supercool.css 
+2011-11-24 20:58:59     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:58:59 identical css/supercool.css 
+2011-11-24 20:59:01     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:59:01 identical css/supercool.css 
+2011-11-24 20:59:08     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:59:08 identical css/supercool.css 
+2011-11-24 20:59:16     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:59:16 identical css/supercool.css 
+2011-11-24 20:59:20     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:59:20 identical css/supercool.css 
+2011-11-24 20:59:52     error sass/supercool.scss (Line 284: Invalid CSS after "					color: #fff": expected ";", was "&:hover{color: ...")
+2011-11-24 20:59:52 identical css/supercool.css 
+2011-11-24 20:59:58 overwrite css/supercool.css 
+2011-11-24 21:00:45 overwrite css/supercool.css 
+2011-11-24 21:03:42 overwrite css/supercool.css 
+2011-11-24 21:04:04 overwrite css/supercool.css 
+2011-11-24 21:04:48 overwrite css/supercool.css 
+2011-11-24 21:07:16 overwrite css/supercool.css 
+2011-11-24 21:07:54 overwrite css/supercool.css 
+2011-11-24 21:09:09 overwrite css/supercool.css 
+2011-11-24 21:10:06 overwrite css/supercool.css 
+2011-11-24 21:10:20 overwrite css/supercool.css 
+2011-11-24 21:10:27 overwrite css/supercool.css 
+2011-11-24 21:10:35 overwrite css/supercool.css 
+2011-11-24 21:10:45 overwrite css/supercool.css 
+2011-11-24 21:11:21 overwrite css/supercool.css 
+2011-11-24 21:11:36 overwrite css/supercool.css 
+2011-11-24 21:11:56 overwrite css/supercool.css 
+2011-11-24 21:12:10 overwrite css/supercool.css 
+2011-11-24 21:12:21 overwrite css/supercool.css 
+2011-11-24 21:12:31 overwrite css/supercool.css 
+2011-11-24 21:12:45 overwrite css/supercool.css 
+2011-11-24 21:12:55 overwrite css/supercool.css 
+2011-11-24 21:13:09 overwrite css/supercool.css 
+2011-11-24 21:14:13 overwrite css/supercool.css 
+2011-11-24 21:15:09 overwrite css/supercool.css 
+2011-11-24 21:15:41 overwrite css/supercool.css 
+2011-11-24 21:15:48 overwrite css/supercool.css 
+2011-11-24 21:16:52     error sass/supercool.scss (Line 195: Invalid CSS after "						color:": expected expression (e.g. 1px, bold), was "#;")
+2011-11-24 21:16:52 overwrite css/supercool.css 
+2011-11-24 21:17:02     error sass/supercool.scss (Line 195: Invalid CSS after "						color:": expected expression (e.g. 1px, bold), was "#;")
+2011-11-24 21:17:02 identical css/supercool.css 
+2011-11-24 21:17:10     error sass/supercool.scss (Line 195: Invalid CSS after "						color:": expected expression (e.g. 1px, bold), was "#;")
+2011-11-24 21:17:10 identical css/supercool.css 
+2011-11-24 21:17:23 overwrite css/supercool.css 
+2011-11-24 21:17:37 overwrite css/supercool.css 
+2011-11-24 21:17:47 overwrite css/supercool.css 
+2011-11-24 21:18:18 overwrite css/supercool.css 
+2011-11-24 21:18:29 overwrite css/supercool.css 
+2011-11-24 21:18:38 overwrite css/supercool.css 
+2011-11-24 21:20:21 overwrite css/supercool.css 
+2011-11-24 21:20:55 overwrite css/supercool.css 
+2011-11-24 21:21:17 overwrite css/supercool.css 
+2011-11-24 21:25:16 overwrite css/supercool.css 
+2011-11-24 21:25:38 overwrite css/supercool.css 
+2011-11-24 21:27:38     error sass/supercool.scss (Line 213: Invalid CSS after "					.img-league{": expected "}", was "{background:url...")
+2011-11-24 21:27:38 overwrite css/supercool.css 
+2011-11-24 21:28:01     error sass/supercool.scss (Line 213: Invalid CSS after "					.img-league{": expected "}", was "{background:url...")
+2011-11-24 21:28:01 identical css/supercool.css 
+2011-11-24 21:28:12     error sass/supercool.scss (Line 213: Invalid CSS after "					.img-league{": expected "}", was "{background:url...")
+2011-11-24 21:28:12 identical css/supercool.css 
+2011-11-24 21:28:23     error sass/supercool.scss (Line 213: Invalid CSS after "					.img-league{": expected "}", was "{background:url...")
+2011-11-24 21:28:23 identical css/supercool.css 
+2011-11-24 21:29:19 overwrite css/supercool.css 
+2011-11-24 21:29:31 identical css/supercool.css 
+2011-11-24 21:30:43 overwrite css/supercool.css 

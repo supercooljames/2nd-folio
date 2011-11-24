@@ -1,258 +1,591 @@
+/* line 17, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
 
 /* COLORS
 _______________________________________*/
-
-			.red{color:#CC0027;}
-
 /* MAIN FRAME
 _______________________________________*/
+/* line 26, ../sass/supercool.scss */
+html, body {
+  background: black url(../images/page-bg.jpg) top center repeat-y;
+}
 
-			html, body{background: #000 url(../images/page-bg.jpg) top center repeat-y;}
-			
-			.border-top{border-top: 0.5em solid #ccc;}
-			.border-bottom{border-bottom: 0.5em solid #ccc; padding-bottom:2em;}
-			
-			.page-height{height: 600px;}
+/* line 28, ../sass/supercool.scss */
+.border-top {
+  border-top: 0.5em solid #ccc;
+}
 
-			.page-top{width: 1030px; height: 37px; display: block; background: url('../images/black-top.png') center top no-repeat; margin-top: -40px;}
-			.page-bottom{width: 1030px; height: 37px; display: block; background: url('../images/black-bot.png') center top no-repeat;}
+/* line 29, ../sass/supercool.scss */
+.border-bottom {
+  border-bottom: 0.5em solid #ccc;
+  padding-bottom: 2em;
+}
 
-			.page-mid{width: 1030px; display: block; background: url('../images/black-mid.png') center top repeat-y;}
+/* line 31, ../sass/supercool.scss */
+.page-height {
+  height: 600px;
+}
 
-			
+/* line 33, ../sass/supercool.scss */
+.page-top {
+  width: 1030px;
+  height: 37px;
+  display: block;
+  background: url("../images/black-top.png") center top no-repeat;
+  margin-top: -40px;
+}
+
+/* line 34, ../sass/supercool.scss */
+.page-bottom {
+  width: 1030px;
+  height: 37px;
+  display: block;
+  background: url("../images/black-bot.png") center top no-repeat;
+}
+
+/* line 36, ../sass/supercool.scss */
+.page-mid {
+  width: 1030px;
+  display: block;
+  background: url("../images/black-mid.png") center top repeat-y;
+}
 
 /* TYPOGRAPHY
 _______________________________________*/
-			
-			h1.stencil{font-size: 3em; color:#fff; margin: 0 0 0.5em 0;}
-			
-			p{font-size: 1.1em}
-			
-			p.intro{font-size: 1.4em; line-height: 1.3em}
-			
-			
+/* line 43, ../sass/supercool.scss */
+h1.stencil {
+  font-size: 3em;
+  color: #fff;
+  margin: 0 0 0.5em 0;
+}
 
-/* PLAIN LISTS
-_______________________________________*/
+/* line 45, ../sass/supercool.scss */
+p {
+  font-size: 1.1em;
+}
 
-			#main-menu,
-			.footer-menu,
-			.sub-list
-			{list-style: none; padding: 0px; margin: 0px;}
-
-			#main-menu li,
-			.footer-menu li,
-			.sub-list li
-			{background: none; padding-left: 0px;}
-
+/* line 47, ../sass/supercool.scss */
+p.intro {
+  font-size: 1.4em;
+  line-height: 1.3em;
+}
 
 /* HEADER
 _______________________________________*/
+/* line 55, ../sass/supercool.scss */
+h1#logo {
+  background: url("../images/logo.png") 0 bottom no-repeat;
+  display: block;
+  width: 286px;
+  height: 208px;
+  margin: 0px;
+  text-indent: -1000px;
+  z-index: 3;
+  padding: 0px;
+}
+/* line 64, ../sass/supercool.scss */
+h1#logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-			h1#logo{background: url('../images/logo.png') 0 bottom no-repeat; display: block; width: 286px; height: 208px; margin: 0px; text-indent:-1000px; z-index:3; padding: 0px;}
-				h1#logo a{display: block; width: 100%; height: 100%}
+/* line 72, ../sass/supercool.scss */
+.top-black {
+  width: 100%;
+  display: block;
+  height: 140px;
+  background: url(../images/top-grad.png) bottom center repeat-x;
+  margin-bottom: -140px;
+}
 
-			.top-black{width:100%; display: block; height: 140px; background: url(../images/top-grad.png) bottom center repeat-x; margin-bottom: -140px;}
+/* line 75, ../sass/supercool.scss */
+#main-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  float: right;
+  display: block;
+  width: 450px;
+  height: 70px;
+  clear: right;
+}
+/* line 9, ../sass/supercool.scss */
+#main-menu li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 82, ../sass/supercool.scss */
+#main-menu li {
+  display: inline;
+  float: left;
+}
+/* line 85, ../sass/supercool.scss */
+#main-menu li a {
+  display: block;
+  float: left;
+  color: #cc0027;
+  padding: 16px 0px 0px 40px;
+  font-size: 1.4em;
+}
+/* line 91, ../sass/supercool.scss */
+#main-menu li a:hover {
+  color: #fff;
+}
+/* line 92, ../sass/supercool.scss */
+#main-menu li a.active {
+  background: url(../images/mm-active-bg.jpg) center bottom no-repeat;
+}
+/* line 93, ../sass/supercool.scss */
+#main-menu li a.last {
+  padding-right: 0px;
+}
 
-
-			#main-menu{float: right; display:block; width: 450px; height:70px;clear:right;}
-			#main-menu li{display:inline; float: left;}
-			#main-menu li a{display:block; float:left; color:#CC0027; padding:16px 0px 0px 40px; font-size: 1.4em;}
-			#main-menu li a:hover{ color:#fff;}
-
-			#main-menu li a.active{background: url(../images/mm-active-bg.jpg) center bottom no-repeat;}
-			#main-menu li a.last{padding-right: 0px;}
-
-
-			#top-nav {
-				float:right;
-				margin:0;
-				padding:6px 0;
-				background:#CC0027;
-				-webkit-border-radius:0 0 6px 6px;
-				-moz-border-radius:0 0 6px 6px;
-				border-radius:0 0 6px 6px;
-			}
-				#top-nav li {
-					display:block;
-					float:left;
-					margin:0;
-					padding:0 6px;
-				}
-					#top-nav li a {
-						color:#000;
-					}
+/* line 99, ../sass/supercool.scss */
+#top-nav {
+  float: right;
+  margin: 0;
+  padding: 6px 0;
+  background: #cc0027;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+/* line 107, ../sass/supercool.scss */
+#top-nav li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0 6px;
+}
+/* line 112, ../sass/supercool.scss */
+#top-nav li a {
+  color: #000;
+}
 
 /* FOOTER
 _______________________________________*/
-			
-			.footer-menu{margin-top: 1.5em;}
-			.footer-menu li{display: inline; padding-right: 15px; float: left;}
-			.footer-menu li a{display: inline; float: left; color: #acc; text-transform: uppercase; font-size:0.9em;}
+/* line 121, ../sass/supercool.scss */
+.footer-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 1.5em;
+}
+/* line 9, ../sass/supercool.scss */
+.footer-menu li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 124, ../sass/supercool.scss */
+.footer-menu li {
+  display: inline;
+  padding-right: 15px;
+  float: left;
+}
+/* line 128, ../sass/supercool.scss */
+.footer-menu li a {
+  display: inline;
+  float: left;
+  color: #acc;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+/* line 134, ../sass/supercool.scss */
+.footer-menu li a:hover {
+  color: #fff;
+}
 
-			.footer-menu li a:hover{color: #fff;}
-
-			/*SITE SEARCH*/
-			
-			.supercool{font-size:0.9em; margin-top:1.5em; color:#455;}
-				.supercool a{color:#455;}
-
+/*SITE SEARCH*/
+/* line 142, ../sass/supercool.scss */
+.supercool {
+  font-size: 0.9em;
+  margin-top: 1.5em;
+  color: #455;
+}
+/* line 146, ../sass/supercool.scss */
+.supercool a {
+  color: #455;
+}
 
 /* BUTTONS
 _______________________________________*/
+/* line 157, ../sass/supercool.scss */
+.nice-button {
+  background: #222222 url(../images/alert-overlay.png) repeat-x;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  text-shadow: 0 -1px 1px #222222;
+  border-bottom: 1px solid #222;
+  position: relative;
+  cursor: pointer;
+  border: 0px;
+}
+/* line 174, ../sass/supercool.scss */
+.nice-button:hover {
+  background-color: #111;
+  color: #fff;
+}
 
+/*HOMEPAGE*/
+/* line 184, ../sass/supercool.scss */
+a.candt-logo {
+  display: block;
+  width: 97px;
+  height: 114px;
+  background: url(../images/candt-logo.png) no-repeat;
+  float: right;
+  margin-top: -1.5em;
+  text-indent: -5000px;
+}
 
-			.nice-button{
-				background: #222 url(../images/alert-overlay.png) repeat-x;
-				display: inline-block;
-				padding: 5px 10px 6px;
-				color: #fff;
-				text-decoration: none;
-				font-weight: bold;
-				line-height: 1;
-				-moz-border-radius: 5px;
-				-webkit-border-radius: 5px;
-				-moz-box-shadow: 0 1px 3px #999;
-				-webkit-box-shadow: 0 1px 3px #999;
-				text-shadow: 0 -1px 1px #222;
-				border-bottom: 1px solid #222;
-				position: relative;
-				cursor: pointer;
-				border: 0px;
-			}
-			
-			.nice-button:hover {background-color: #111; color: #fff; }
+/* line 185, ../sass/supercool.scss */
+a.supercool {
+  display: block;
+  width: 85px;
+  height: 26px;
+  background: url(../images/supercool.png) no-repeat;
+  float: left;
+  margin-top: -10px;
+  text-indent: -5000px;
+}
 
-
-
-
-			/*HOMEPAGE*/
-			
-				.home-links
-
-
-			
-				a.candt-logo{display: block; width: 97px; height: 114px; background: url(../images/candt-logo.png) no-repeat; float: right; margin-top: -1.5em; text-indent: -5000px}
-				a.supercool{display: block; width: 85px; height: 26px; background: url(../images/supercool.png) no-repeat; float: left; margin-top: -10px; text-indent: -5000px;}			
-			
-			
-				
 /* FORMS
 _______________________________________*/
+/* line 192, ../sass/supercool.scss */
+.hiddenFields {
+  display: none;
+}
 
-			.hiddenFields{display: none;}
-
-
-			.suggestion-form input, .suggestion-form textarea {border: 1px solid #444; background: #222; color:#aaa;}
+/* line 193, ../sass/supercool.scss */
+.suggestion-form input, .suggestion-form textarea {
+  border: 1px solid #444;
+  background: #222;
+  color: #aaa;
+}
 
 /* OTHER
 _______________________________________*/
+/* line 198, ../sass/supercool.scss */
+.search-box {
+  margin-top: 4em;
+  background: #222;
+  border: 1px solid #999;
+  width: 230px;
+  padding: 15px;
+}
+/* line 204, ../sass/supercool.scss */
+.search-box h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+/* line 205, ../sass/supercool.scss */
+.search-box p {
+  font-size: 1em;
+  margin-bottom: 0.25em;
+}
 
-			.search-box{margin-top:4em;background: #222; border: 1px solid #999; width: 230px; padding: 15px;}
-				.search-box h3{font-size: 1.3em; margin-bottom: 0.5em}
-				.search-box p{font-size: 1em; margin-bottom: 0.25em}
-
-							
 /* MAJOR ELEMENTS
 _______________________________________*/
-
-			.sub-list{}
-				.sub-list li{padding-bottom: 0.5em; background: url('../images/dotted-small-red.gif') left bottom repeat-x; margin-bottom: 0.5em;}
-					.sub-list li small{display: block; margin-top:0.25em;}
-						.sub-list a{display: block;}
-							.sub-list li a.active{color:#999;}
+/* line 212, ../sass/supercool.scss */
+.sub-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 9, ../sass/supercool.scss */
+.sub-list li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 214, ../sass/supercool.scss */
+.sub-list li {
+  padding-bottom: 0.5em;
+  background: url("../images/dotted-small-red.gif") left bottom repeat-x;
+  margin-bottom: 0.5em;
+}
+/* line 218, ../sass/supercool.scss */
+.sub-list li small {
+  display: block;
+  margin-top: 0.25em;
+}
+/* line 222, ../sass/supercool.scss */
+.sub-list li a {
+  display: block;
+}
+/* line 224, ../sass/supercool.scss */
+.sub-list li a.active {
+  color: #999;
+}
 
 /* PAGE SPECIFIC
 _______________________________________*/
+/*HOMEPAGE*/
+/* line 240, ../sass/supercool.scss */
+.site-intro-mov {
+  width: 950px;
+  height: 560px;
+  background: #666;
+}
 
+/*LEAGUE*/
+/* line 245, ../sass/supercool.scss */
+table.league {
+  font-size: 1.1em small;
+  font-size-font-size: 0.7em;
+}
+/* line 248, ../sass/supercool.scss */
+table.league th {
+  display: table-cell;
+  vertical-align: bottom;
+  transform: uppercase;
+}
+/* line 249, ../sass/supercool.scss */
+table.league td {
+  padding: 0.75em 10px;
+}
+/* line 250, ../sass/supercool.scss */
+table.league .odd {
+  background: #444;
+}
+/* line 251, ../sass/supercool.scss */
+table.league .tother {
+  background: #222;
+}
+/* line 252, ../sass/supercool.scss */
+table.league .team {
+  width: 45%;
+  text-align: left;
+  text-transform: uppercase a;
+  text-transform-color: #fff;
+}
+/* line 255, ../sass/supercool.scss */
+table.league .team a:hover {
+  color: #cc0027;
+}
+/* line 256, ../sass/supercool.scss */
+table.league .team small {
+  font-size: 0.6em;
+}
+/* line 258, ../sass/supercool.scss */
+table.league .played {
+  width: 25%;
+  text-align: center;
+}
+/* line 259, ../sass/supercool.scss */
+table.league .average {
+  width: 25%;
+  text-align: center;
+}
+/* line 260, ../sass/supercool.scss */
+table.league .total {
+  width: 10%;
+  text-align: right;
+}
 
-			/*HOMEPAGE*/
-			
-			.site-intro-mov{width: 950px; height: 560px; background: #666}
+/* line 265, ../sass/supercool.scss */
+#league .box {
+  background: none;
+  border: 1px solid #fff;
+}
 
+/*CHARACTER*/
+/* line 272, ../sass/supercool.scss */
+.character-box {
+  display: block;
+  float: left;
+  margin: 0px 38px 1em 0px;
+  width: 190px;
+  overflow: hidden;
+}
+/* line 278, ../sass/supercool.scss */
+.character-box img {
+  margin: 0px;
+  display: block;
+  float: left;
+  margin-left: -20px;
+}
+/* line 279, ../sass/supercool.scss */
+.character-box h3 {
+  font-size: 1.2em;
+}
+/* line 280, ../sass/supercool.scss */
+.character-box p {
+  font-size: 0.8em;
+}
+/* line 281, ../sass/supercool.scss */
+.character-box h3, .character-box p {
+  margin-bottom: 0em;
+  color: #fff;
+}
+/* line 284, ../sass/supercool.scss */
+.character-box h3:hover, .character-box p:hover {
+  color: #cc0027;
+}
 
-			/*LEAGUE*/
+/*SITE MAP PAGE*/
+/* line 293, ../sass/supercool.scss */
+.sitemap li {
+  color: #333;
+  margin-top: 1em;
+  font-weight: bolder;
+  border-bottom: 0px solid red;
+}
+/* line 298, ../sass/supercool.scss */
+.sitemap li a {
+  color: #333;
+}
+/* line 300, ../sass/supercool.scss */
+.sitemap li a:hover {
+  color: #9048bf;
+}
+/* line 302, ../sass/supercool.scss */
+.sitemap li ul li {
+  color: #666;
+  margin-top: 0em;
+  font-weight: lighter;
+  display: inline;
+  width: 100%;
+}
+/* line 308, ../sass/supercool.scss */
+.sitemap li ul li a {
+  color: #666;
+  display: block;
+  padding: 0.3em 0px;
+  border-bottom: 1px solid #ccc;
+}
 
-			table.league{font-size: 1.1em}
-				table.league small{font-size: 0.7em}				
-	
-				table.league th{display:table-cell; vertical-align:bottom; transform: uppercase}				
-	
-				table.league td{padding: 0.75em 10px}				
-	
-				table.league .odd{background:#444}
-				table.league .tother{background:#222}
-				
-			table.league .team		{width:45%; text-align: left; text-transform: uppercase}
-			table.league .played	{width:25%; text-align: center;}			
-			table.league .average	{width:25%; text-align: center;}			
-			table.league .total		{width:10%; text-align: right;}		
+/*SEARCH RESULTS PAGE*/
+/* line 323, ../sass/supercool.scss */
+.search-results li {
+  border-bottom: 1px solid #ccc;
+  padding: 1em 0;
+}
+/* line 324, ../sass/supercool.scss */
+.search-results h3 {
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+/* line 325, ../sass/supercool.scss */
+.search-results p {
+  margin: 0.5em 0 0 0;
+}
+/* line 326, ../sass/supercool.scss */
+.search-results a {
+  color: #fff;
+}
 
-			table.league .team a {color:#fff;}
-			table.league .team a:hover {color:#CC0027;}
-			table.league .team small {font-size: 0.6em;}
-			
-			#league .box {
-				background:none;
-				border:1px solid #fff;
-			}
-
-			/*CHARACTER*/
-
-			.character-box {display: block; float: left;margin: 0px 38px 1em 0px; width: 190px; overflow: hidden;}
-			.character-box img{margin: 0px; display: block; float:left; margin-left:-20px;}
-
-			.character-box h3{font-size: 1.2em}
-			.character-box p{font-size: 0.8em;}
-
-			.character-box h3, .character-box p{margin-bottom: 0em; color: #fff}		
-
-			a.character-box:hover h3, a.character-box:hover p{color: #CC0027}					
-			
-			
-			/*SITE MAP PAGE*/
-			.sitemap li{color: #333; margin-top: 1em; font-weight: bolder; border-bottom: 0px solid red;}
-			.sitemap li a{color: #333;}
-				.sitemap li a:hover{color: #9048bf;}	
-
-			.sitemap li ul li{color: #666; margin-top: 0em; font-weight:lighter; display: inline; width: 100%;}
-			.sitemap li ul li a{color: #666; display: block; padding: 0.3em 0px; border-bottom: 1px solid #ccc;}
-
-
-			/*SEARCH RESULTS PAGE*/
-			.search-results li{border-bottom: 1px solid #ccc; padding: 1em 0;}
-			.search-results h3{font-size: 1em; margin-bottom: 0px;}
-			.search-results p{margin: 0.5em 0 0 0;}
-			.search-results a{color:#fff}
-
-
+/* line 330, ../sass/supercool.scss */
 #my-account h2 {
-	color:#CC0027;
-	display:block;
-	border-bottom:1px solid #fff;
-	margin:0 0 10px 0;
+  color: #cc0027;
+  display: block;
+  border-bottom: 1px solid #fff;
+  margin: 0 0 10px 0;
 }
-	#my-account h2.bout-details {
-		margin:0;
-		border:none;
-	}
-#my-account .sub-menu li {
-	padding:0;
-	margin:5px 0;
-	border-bottom:1px solid #fff;
-}
-	#my-account .sub-menu li a {
-		color:#fff;
-	}
-#my-account .box {
-	background:none;
-	padding:10px;
-	border:1px solid #fff;
-}
-#my-account .button {
-	float:right;
+/* line 335, ../sass/supercool.scss */
+#my-account h2 .bout-details {
+  margin: 0;
+  border: none;
 }
 
+/* line 340, ../sass/supercool.scss */
+#my-account .sub-menu li {
+  padding: 0;
+  margin: 5px 0;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 345, ../sass/supercool.scss */
+#my-account .sub-menu li a {
+  color: #fff;
+}
+
+/* line 348, ../sass/supercool.scss */
+#my-account .box {
+  background: none;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+/* line 353, ../sass/supercool.scss */
+#my-account .button {
+  float: right;
+}
+
+/* line 357, ../sass/supercool.scss */
 #add-team {
-	display:none;
+  display: none;
 }

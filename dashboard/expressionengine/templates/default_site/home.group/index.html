@@ -23,14 +23,14 @@
 		<ul class="home-links">
 				{if logged_out}
 
-					<li>
-						<div class="img-cards"></div>
+					<li class="img-cards">
+						<div></div>
 						<h3>About 2nd Folio</h3>
 						<p>What links Shakespeare, QR Codes, Playing Cards and Fun?</p>
 						<a href="{path="qr/"}" class="home-btn-qr">GO</a>
 					</li>
-					<li>
-						<div class="img-league"></div>
+					<li class="img-league">
+						<div></div>
 						<h3>Join the Games</h3>
 						<p>Compete with young people from across the world</p>						
 						<a href="{path="cards/"}" class="home-btn-cards">GO</a>
@@ -41,21 +41,24 @@
 						<p>Login for goes here</p>
 
 					</li>
-				{/if}
+
+{!--				{/if}
 				{if logged_in}
-					<li>
-						<div class="img-qr"></div>
+--}
+					<li class="img-cards">
+						<div></div>
 						<h3>2nd Folio playing cards</h3>
 						<p>Download and print the latest cards</p>
 						<a href="{path="qr/"}" class="home-btn-qr">GO</a>
 					</li>									
-					<li>
-						<div class="img-cards"></div>
+					<li class="img-cards">
+						<div></div>
 						<h3>The 2nd Folio League Table</h3>
 						<p>The winners &amp; losers</p>
 						<a href="{path="cards/"}" class="home-btn-cards">GO</a>
 					</li>
-					<li>
+					<li class="img-qr">
+						<div></div>						
 						<h3>Scan 2nd Folio QR Codes</h3>
 						<p>Use the cards to find hint &amp; tips online</p>
 						<a href="{path="league/"}" class="home-btn-league">GO</a>
