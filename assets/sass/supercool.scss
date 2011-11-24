@@ -179,7 +179,86 @@ _______________________________________*/
 			
 
 			/*HOMEPAGE*/
+			
+			.home-links{
+				@include plain-list;
+				margin-top:24px;
+				li{
+					float:left;
+					display: inline;
+					width: 285px;
+					height: 124px;
+					background:url(../images/home-btn-bg.png) no-repeat -5px 0;
+					padding: 15px 10px 15px 20px;
+					position:relative;
+					h3 {
+						font-size:20px;
+						margin-bottom:12px;
+						a{
+							color:#000;
+							&:hover{color:$red;}
+						}
+					}
+					p{
+						color:#fff;
+						font-weight: normal;
+						font-size:15px;
+					}
 
+					.go-btn{
+						position:absolute;
+						right:15px;
+						bottom:12px;
+						background:$red;
+						color:#fff;
+						line-height: 25px;
+						display:block;
+						font-size:20px;
+						padding: 5px 6px 0px;
+						border: 0px;
+						
+						@include border-radius(5px);						
+						&:hover{background:#000}
+					}
+					div{
+						position:absolute;
+					}
+					&.img-cards {
+						div{background:url(../images/home-btn-cards.png) no-repeat 0 0;width:165px;height:181px; margin-top:-35px;margin-left:-55px;}
+						h3,p{margin-left:110px}
+					}
+					&.img-league{
+						div{background:url(../images/home-btn-scoreboard.png) no-repeat 0 0;width: 111px; height:166px;margin-top:-25px;margin-left:0px;}
+						h3,p{margin-left:130px}
+					}
+					&.img-qr{
+						div{background:url(../images/home-btn-qr.png) no-repeat 0 0; width:152px;height:155px;margin-top:-20px;margin-left:-40px;}					
+						h3{margin-left:110px}
+						p{margin-left:120px}
+					}
+					&.login{
+						label{
+							font-family:arial, sans-serif;
+							font-size:12px;
+							display: block;
+							width: 100px;
+							float:left;
+							clear:left;
+						}
+						input{
+							font-size:14px;
+							padding: 2px;
+							border: 2px solid #888;
+							background:#ddd;
+							margin: 0px;
+							float:left;
+						}
+
+						}
+				}
+				
+			}
+			
 			
 			a.candt-logo{display: block; width: 97px; height: 114px; background: url(../images/candt-logo.png) no-repeat; float: right; margin-top: -1.5em; text-indent: -5000px}
 			a.supercool{display: block; width: 85px; height: 26px; background: url(../images/supercool.png) no-repeat; float: left; margin-top: -10px; text-indent: -5000px;}			
