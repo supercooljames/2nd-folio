@@ -4,6 +4,8 @@
 		<title>QR Reader | 2nd Folio</title>
 		
 		{embed="includes/head"}
+		<script type="text/javascript" src="{site_url}assets/scanner/js/jquery.min.js"></script>
+		<script type="text/javascript" src="{site_url}assets/scanner/js/jquery.webcamqrcode.js"></script>
 		
 	</head>
 	<body>
@@ -13,20 +15,42 @@
 			<div class="page-mid">
 				<div class="span-24">
 					<div class="span-16">
-					{exp:channel:entries entry_id="62"}
-						<h1 class="stencil">{title}</h1>
+
+					
+						{exp:channel:entries entry_id="62"}
+							<h1 class="stencil">{title}</h1>
+
+					
+					<script>
+					(function($){
+						$('document').ready(function(){
+							$('#qrcodebox').WebcamQRCode({
+								onQRCodeDecode: function( p_data ){
+										$('#qrcode_result').html( p_data );
+										window.location.replace(p_data);
+								}
+							});
+
+							$('#btn_start').click(function(){
+								$('#qrcodebox').WebcamQRCode().start();
+							});
+
+							$('#btn_stop').click(function(){
+								$('#qrcodebox').WebcamQRCode().stop();
+							});
+						});
+					})(jQuery);
+					</script>
+					
+					<div style="width: 500px; height: 500px;margin: 30px 250px" id="qrcodebox"></div>
+					
+					
 						<p class="intro">{intro}</p>
 						{body}
 					{/exp:channel:entries}
 					</div>
-					{exp:search:simple_form result_page="qr/search" channel="quotes|tasks" where="all" search_in="everywhere"}
-						<div class="span-7 push-1 last search-box">
-						<h3>Search</h3>
-						<p>If you're having problems with the QR Reader, search for your quote or task here ...</p>
-						<input type="text" name="keywords" class="filled" value="keywords ...">
-						<button class="nice-button">Search</button>
-					{/exp:search:simple_form}
-					</div>
+
+						
 				</div>
 				<div class="clear"></div>
 			</div>

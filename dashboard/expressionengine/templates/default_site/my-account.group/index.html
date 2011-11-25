@@ -30,16 +30,16 @@
 						<div class="span-15 push-1 last">
 							<a class="button" href="{path="member/edit_profile"}">edit</a>
 							<h2>My Bio</h2>
-							<div>
+							<div class="appendbottom">
 							{if location != ''}
-							<p>Location: <i>{location}</i></p>
+							<p class="location">Location: <i>{location}</i></p>
 							{/if}
 							{exp:member:custom_profile_data}
 								{if bio != ''}
-								{bio}
+								<div class="bio">{bio}</div>
 								{/if}
 								{if bio == ''}
-								You haven't filled out your bio yet. You can do so <a href="{path="member/edit_profile"}">here</a>.
+								<div class="empty">You haven't filled out your bio yet. You can do so <a href="{path="member/edit_profile"}">here</a>.</div>
 								{/if}
 							{/exp:member:custom_profile_data}
 							</div>
@@ -66,19 +66,19 @@
 							<table class="league">
 								<thead>
 									<td class="team">Team</td>
-									<td class="played">Played<br /><small>[Number of rounds]</small></td>
-									<td played="average">Average<br /><small>[Points scored]</small></td>
+									<td class="played">Rounds Played</small></td>
+									<td played="average">Average Points</small></td>
 									<td class="total">Total</td>
-									<td>Edit</td>
+									<td class="edit"></td>
 								</thead>
 								<tbody>
 									{exp:channel:entries channel="team" username="CURRENT_USER" orderby="team_total_points" sort="desc"}
 									<tr class="{switch="odd|tother"}">
-										<td>{title}</td>
-										<td>{team_games_played}</td>
-										<td>{exp:simple_math calculate="round({team_total_points} / {team_games_played},0)"}</td>
-										<td>{team_total_points}</td>
-										<td><a href="{title_permalink="my-account"}" class="button">edit</a></td>
+										<td class="team">{title}</td>
+										<td class="played">{team_games_played}</td>
+										<td class="average">{exp:simple_math calculate="round({team_total_points} / {team_games_played},0)"}</td>
+										<td class="total">{team_total_points}</td>
+										<td class="edit"><a href="{title_permalink="my-account"}" class="button">edit</a></td>
 									</tr>
 									{/exp:channel:entries}
 								</tbody>
@@ -102,6 +102,16 @@
 
 								<label for="team_total_points">Total Points</label><br />
 								{field:team_total_points}<br />
+								
+
+						        <p>Delete Team<br>
+									<select name="status" id="status">
+									        {statuses}
+									                <option value="{deleted}"{selected}>{status}</option>
+									        {/statuses}
+									</select>
+						        </p>
+
 
 								<input type="submit" value="Submit" />
 							{/exp:safecracker}
