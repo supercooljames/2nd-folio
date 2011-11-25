@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 	$('.add-team-trigger').click(function(e){
 		e.preventDefault();
 		$('#add-team').show();
