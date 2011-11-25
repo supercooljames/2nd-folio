@@ -1,14 +1,43 @@
-php_value memory_limit 120M
+#php_value memory_limit 120M
 
-RewriteEngine On
-RewriteCond $1 ^(member|home|shop|my-account|login|about|rules|submit|search|characters|tasks|quotes|league|includes|qr|cards|P[0-9]{2,8}) [NC]
-RewriteRule ^(.*)$ /index.php/$1 [L] 
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
 
 
+# Don't show any directory without an index file
+Options -Indexes
+
+
+# Dont list files in index pages
+IndexIgnore *
+
+
+# EE 404 page for missing pages
 ErrorDocument 404 /index.php?/home/404
 
-# Fix queries for actions, urls and css in EE
-RewriteCond %{QUERY_STRING} ^(ACT=.*)$ [NC,OR]
-RewriteCond %{QUERY_STRING} ^(URL=.*)$ [NC,OR]
-RewriteCond %{QUERY_STRING} ^(CSS=.*)$ [NC]   
-RewriteRule ^(.*)$ /index.php\?&%{QUERY_STRING} [L] 
+
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /
+
+
+# Force www's - uncomment for production
+# RewriteCond %{HTTP_HOST} !^www\.
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L] 
+
+
+# Remove index.php
+
+# Exclude root files
+RewriteCond $1 !^(favicon\.ico|index\.php|admin\.php) [NC]
+
+# Exclude EE folders
+RewriteCond $1 !^(dashboard|images|themes|assets|uploads) [NC]
+
+# Exclude pages template groups
+#RewriteCond $1 !^() [NC]
+
+# Remove index.php
+RewriteRule ^(.*)$ /index.php/$1 [L]
