@@ -18,7 +18,7 @@
 (function($){
     $.WebcamQRCode = function( ){}
     $.WebcamQRCode.defaultOptions = {
-    	messageNoFlash:		"L'animation flash n'est pas prise en charge",
+    	messageNoFlash:		"You need the Adobe Flash plugin installed for this to work.",
         onQRCodeDecode: 	function( p_data ){ alert( "onQRCodeDecode data: " + p_data ); },
         onError:			function( p_e ){ alert( p_e ); },
         webcamOnStart:		true,
@@ -44,6 +44,7 @@
 		_flash.attr( 'data', __options.path + "../assets/scanner/swf/webcamqrcode.swf?ID=" + $this.attr( '_webcam_qrcode_id' ) );
 		_flash.attr( 'width', "100%" );
 		_flash.attr( 'height', "100%" );
+        _flash.attr('bgcolor', "#000000");
 		_flash.append( _messageNoFlash );
 		            
 		$this.html( _flash );
