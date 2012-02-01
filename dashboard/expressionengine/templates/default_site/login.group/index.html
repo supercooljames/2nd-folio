@@ -12,7 +12,8 @@
 			<div class="page-top"></div>
 			<div class="page-mid">
 				<div class="span-24">
-					<div class="span-18">
+					<div class="span-8">
+						<h1 class="stencil">Sign-in</h1>
 						{if logged_out}
 						{exp:member:login_form return="my-account"}
 							<label class="stencil">Username</label><br />
@@ -28,7 +29,19 @@
 						{redirect="my-account"}
 						{/if}
 					</div>
+					<div class="span-8">
+						<h1 class="stencil">Register</h1>
+						
+						Sign up for a 2nd folio user account and subscribe to a forthcoming bout! <br />
+						
+						<a href="{path='member/register'}">Buy Now</a>
+					</div>
+					
+					
 				</div>
+				
+				
+				
 				<div class="clear"></div>
 			</div>
 			<div class="page-bottom"></div>
